@@ -12,7 +12,7 @@ namespace TPWinForm_equipo_11A
         /// Punto de entrada principal para la aplicación.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main() //PRUEBA AILIN
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
