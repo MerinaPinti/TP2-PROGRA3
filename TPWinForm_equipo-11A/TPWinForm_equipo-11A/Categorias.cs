@@ -8,7 +8,8 @@ namespace TPWinForm_equipo_11A
 {
     internal class Categorias
     {
-        int ID;
-        string descripcion;
+        public int ID { get; set; }
+        public string Descripcion { get; set; }
+
     }
 }
