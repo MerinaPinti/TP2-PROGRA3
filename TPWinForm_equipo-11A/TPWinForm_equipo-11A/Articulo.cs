@@ -8,12 +8,13 @@ namespace TPWinForm_equipo_11A
 {
     internal class Articulo
     {
-        int ID;
-        string codigo;
-        string nombre;
-        string descripcion;
-        int ID_marca;
-        int ID_categoria;
-        float precio;
+        public int ID { get; set; }
+        public string Codigo { get; set; }
+        public string Nombre { get; set; }
+        public string Descripcion { get; set; }
+        public int ID_Marca { get; set; }
+        public int ID_Categoria { get; set; }
+        public float Precio { get; set; }
+
     }
 }
