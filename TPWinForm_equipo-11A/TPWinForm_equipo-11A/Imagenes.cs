@@ -8,8 +8,8 @@ namespace TPWinForm_equipo_11A
 {
     internal class Imagenes
     {
-        int ID;
-        int ID_articulo;
-        string imagen_URL;
+        public int ID {  get; set; }
+        public int ID_Articulo { get; set; }
+        public string URLimagen {  get; set; }
     }
 }
