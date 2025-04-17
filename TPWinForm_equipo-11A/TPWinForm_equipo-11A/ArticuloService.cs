@@ -4,6 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient; //5. libreria para establecer la conexion y leer los datos de la BDD
+using Dominio; 
+
+
+
 namespace TPWinForm_equipo_11A
 {
     internal class ArticuloService
@@ -24,7 +28,9 @@ namespace TPWinForm_equipo_11A
             {
                 //7. una vez creados los objetos los tengo que configurar
                 //7a cadena de conexion. indica la direccion de la BDD que vamos a usar
-                conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
+                //CONEXIÓN MERI "server=.\\SQLEXPRESS01; database=CATALOGO_P3_DB; integrated security=true";
+                //CONEXIÓN NORMAL "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
+                conexion.ConnectionString = "server=.\\SQLEXPRESS01; database=CATALOGO_P3_DB; integrated security=true";
                 //7b configuracion del comando de texto
                 comando.CommandType = System.Data.CommandType.Text;
                 //7c configuracion del contenido del texto (consulta) que va a contener el comando

@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TPWinForm_equipo_11A
+namespace Dominio
 {
-    internal class Marcas
+    public class Categorias
     {
         public int ID { get; set; }
         public string Descripcion { get; set; }
+
     }
 }
