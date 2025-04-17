@@ -17,6 +17,7 @@ namespace TPWinForm_equipo_11A
         public Frm_ListarArticulos()
         {
             InitializeComponent();
+            
         }
 
         private void dgv_listadoArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -31,5 +32,8 @@ namespace TPWinForm_equipo_11A
             ArticuloService service = new ArticuloService();
             dgv_listadoArticulos.DataSource = service.listar();
         }
+
+       
+
     }
 }
