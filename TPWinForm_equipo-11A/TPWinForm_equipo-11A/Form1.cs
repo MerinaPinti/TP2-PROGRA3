@@ -16,5 +16,11 @@ namespace TPWinForm_equipo_11A
         {
             InitializeComponent();
         }
+
+        private void frm_Principal_Load(object sender, EventArgs e)
+        {
+            ArticuloService service = new ArticuloService();
+            dgvArticulos.DataSource = service.listar();
+        }
     }
 }
