@@ -21,8 +21,8 @@ namespace TPWinForm_equipo_11A
 
         private void Frm_ListarCategorias_Load(object sender, EventArgs e)
         {
-            CategoriaNegocio service = new CategoriaNegocio();
-            dgv_ListarCategorias.DataSource = service.listar();
+            CategoriaNegocio negocio = new CategoriaNegocio();
+            dgv_ListarCategorias.DataSource = negocio.listar();
         }
     }
 }
