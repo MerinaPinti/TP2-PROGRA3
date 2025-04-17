@@ -38,5 +38,14 @@ namespace TPWinForm_equipo_11A
             ventana.Show();
           
         }
+
+        //Boton Agregar Archivos 
+        private void tstrip_Agregar_Archivos_Click(object sender, EventArgs e)
+        {
+            frm_Agregar_Articulo ventana = new frm_Agregar_Articulo();
+            ventana.MdiParent = this; 
+            ventana.Show(); 
+
+        }
     }
 }

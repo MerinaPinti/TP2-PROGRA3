@@ -79,8 +79,9 @@
             // tstrip_Agregar_Archivos
             // 
             this.tstrip_Agregar_Archivos.Name = "tstrip_Agregar_Archivos";
-            this.tstrip_Agregar_Archivos.Size = new System.Drawing.Size(125, 22);
+            this.tstrip_Agregar_Archivos.Size = new System.Drawing.Size(180, 22);
             this.tstrip_Agregar_Archivos.Text = "Agregar";
+            this.tstrip_Agregar_Archivos.Click += new System.EventHandler(this.tstrip_Agregar_Archivos_Click);
             // 
             // tstrip_Modificar_Archivos
             // 
