@@ -1,6 +1,6 @@
 ﻿namespace TPWinForm_equipo_11A
 {
-    partial class frm_Agregar_Articulo
+    partial class Frm_AgregarArticulo
     {
         /// <summary>
         /// Required designer variable.
@@ -113,7 +113,7 @@
             this.tb_nombreArt.Multiline = true;
             this.tb_nombreArt.Name = "tb_nombreArt";
             this.tb_nombreArt.Size = new System.Drawing.Size(285, 21);
-            this.tb_nombreArt.TabIndex = 7;
+            this.tb_nombreArt.TabIndex = 0;
             // 
             // tb_Descrip
             // 
@@ -122,7 +122,7 @@
             this.tb_Descrip.Multiline = true;
             this.tb_Descrip.Name = "tb_Descrip";
             this.tb_Descrip.Size = new System.Drawing.Size(285, 42);
-            this.tb_Descrip.TabIndex = 8;
+            this.tb_Descrip.TabIndex = 1;
             // 
             // tb_codArt
             // 
@@ -131,7 +131,7 @@
             this.tb_codArt.Multiline = true;
             this.tb_codArt.Name = "tb_codArt";
             this.tb_codArt.Size = new System.Drawing.Size(285, 21);
-            this.tb_codArt.TabIndex = 9;
+            this.tb_codArt.TabIndex = 2;
             // 
             // tb_Precio
             // 
@@ -140,7 +140,7 @@
             this.tb_Precio.Multiline = true;
             this.tb_Precio.Name = "tb_Precio";
             this.tb_Precio.Size = new System.Drawing.Size(285, 21);
-            this.tb_Precio.TabIndex = 11;
+            this.tb_Precio.TabIndex = 5;
             // 
             // lb_Titulo
             // 
@@ -158,7 +158,7 @@
             this.bt_Agregar.Location = new System.Drawing.Point(314, 363);
             this.bt_Agregar.Name = "bt_Agregar";
             this.bt_Agregar.Size = new System.Drawing.Size(82, 29);
-            this.bt_Agregar.TabIndex = 13;
+            this.bt_Agregar.TabIndex = 6;
             this.bt_Agregar.Text = "Agregar";
             this.bt_Agregar.UseVisualStyleBackColor = true;
             // 
@@ -174,7 +174,7 @@
             this.cBox_Marca.Location = new System.Drawing.Point(111, 225);
             this.cBox_Marca.Name = "cBox_Marca";
             this.cBox_Marca.Size = new System.Drawing.Size(285, 21);
-            this.cBox_Marca.TabIndex = 14;
+            this.cBox_Marca.TabIndex = 3;
             // 
             // cBox_Categoria
             // 
@@ -183,9 +183,9 @@
             this.cBox_Categoria.Location = new System.Drawing.Point(111, 273);
             this.cBox_Categoria.Name = "cBox_Categoria";
             this.cBox_Categoria.Size = new System.Drawing.Size(285, 21);
-            this.cBox_Categoria.TabIndex = 15;
+            this.cBox_Categoria.TabIndex = 4;
             // 
-            // frm_Agregar_Articulo
+            // Frm_AgregarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -206,7 +206,7 @@
             this.Controls.Add(this.lb_NombreArticulo);
             this.Controls.Add(this.lb_Cod_Articulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "frm_Agregar_Articulo";
+            this.Name = "Frm_AgregarArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Artículo";
             this.ResumeLayout(false);

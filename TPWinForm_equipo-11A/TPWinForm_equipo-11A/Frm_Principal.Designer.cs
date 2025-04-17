@@ -79,20 +79,21 @@
             // tstrip_Agregar_Archivos
             // 
             this.tstrip_Agregar_Archivos.Name = "tstrip_Agregar_Archivos";
-            this.tstrip_Agregar_Archivos.Size = new System.Drawing.Size(125, 22);
+            this.tstrip_Agregar_Archivos.Size = new System.Drawing.Size(180, 22);
             this.tstrip_Agregar_Archivos.Text = "Agregar";
             this.tstrip_Agregar_Archivos.Click += new System.EventHandler(this.tstrip_Agregar_Archivos_Click);
             // 
             // tstrip_Modificar_Archivos
             // 
             this.tstrip_Modificar_Archivos.Name = "tstrip_Modificar_Archivos";
-            this.tstrip_Modificar_Archivos.Size = new System.Drawing.Size(125, 22);
+            this.tstrip_Modificar_Archivos.Size = new System.Drawing.Size(180, 22);
             this.tstrip_Modificar_Archivos.Text = "Modificar";
+            this.tstrip_Modificar_Archivos.Click += new System.EventHandler(this.tstrip_Modificar_Archivos_Click);
             // 
             // tstrip_Eliminar_Archivos
             // 
             this.tstrip_Eliminar_Archivos.Name = "tstrip_Eliminar_Archivos";
-            this.tstrip_Eliminar_Archivos.Size = new System.Drawing.Size(125, 22);
+            this.tstrip_Eliminar_Archivos.Size = new System.Drawing.Size(180, 22);
             this.tstrip_Eliminar_Archivos.Text = "Eliminar";
             // 
             // tstrip_Marcas
@@ -108,19 +109,19 @@
             // tstrip_Agregar_Marcas
             // 
             this.tstrip_Agregar_Marcas.Name = "tstrip_Agregar_Marcas";
-            this.tstrip_Agregar_Marcas.Size = new System.Drawing.Size(125, 22);
+            this.tstrip_Agregar_Marcas.Size = new System.Drawing.Size(180, 22);
             this.tstrip_Agregar_Marcas.Text = "Agregar";
             // 
             // tstrip_Modificar_Marcas
             // 
             this.tstrip_Modificar_Marcas.Name = "tstrip_Modificar_Marcas";
-            this.tstrip_Modificar_Marcas.Size = new System.Drawing.Size(125, 22);
+            this.tstrip_Modificar_Marcas.Size = new System.Drawing.Size(180, 22);
             this.tstrip_Modificar_Marcas.Text = "Modificar";
             // 
             // tstrip_Eliminar_Marcas
             // 
             this.tstrip_Eliminar_Marcas.Name = "tstrip_Eliminar_Marcas";
-            this.tstrip_Eliminar_Marcas.Size = new System.Drawing.Size(125, 22);
+            this.tstrip_Eliminar_Marcas.Size = new System.Drawing.Size(180, 22);
             this.tstrip_Eliminar_Marcas.Text = "Eliminar";
             // 
             // tstrip_Categorias

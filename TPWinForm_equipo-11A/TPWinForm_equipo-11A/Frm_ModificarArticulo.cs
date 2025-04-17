@@ -7,18 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Dominio;
-using Negocio; 
 
 namespace TPWinForm_equipo_11A
 {
-    public partial class Frm_AgregarArticulo : Form
+    public partial class Frm_ModificarArticulo : Form
     {
-        public Frm_AgregarArticulo()
+        public Frm_ModificarArticulo()
         {
             InitializeComponent();
         }
 
-       
     }
 }

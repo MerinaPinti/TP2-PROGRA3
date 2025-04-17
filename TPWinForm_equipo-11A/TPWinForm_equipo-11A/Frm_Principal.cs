@@ -29,6 +29,11 @@ namespace TPWinForm_equipo_11A
         /// Evento que se acciona cuando presionamos "LISTAR->ARTICULOS" de Toolstrip 
         private void archivosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(Frm_AgregarArticulo))
+                    return;
+            }
             Frm_ListarArticulos ventana = new Frm_ListarArticulos();
             //para que no se pueda abrir mucas veces sino solo una vez 
             //Con esto uso la ventana principal como padre y quede dentro de la principal (Container true). 
@@ -41,7 +46,12 @@ namespace TPWinForm_equipo_11A
         //Boton Agregar Articulos ARTÍCULOS-> AGREGAR  
         private void tstrip_Agregar_Archivos_Click(object sender, EventArgs e)
         {
-            frm_Agregar_Articulo ventana = new frm_Agregar_Articulo();
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(Frm_AgregarArticulo))
+                    return;
+            }
+            Frm_AgregarArticulo ventana = new Frm_AgregarArticulo();
             ventana.MdiParent = this; 
             ventana.Show(); 
 
@@ -55,11 +65,29 @@ namespace TPWinForm_equipo_11A
         //LISTAR CATEGORÍAS /// Evento que se acciona cuando presionamos "LISTAR->CATEGORÍAS" de Toolstrip 
         private void categoríasToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(Frm_ListarCategorias))
+                    return;
+            }
             Frm_ListarCategorias ventana = new Frm_ListarCategorias();
             //para que no se pueda abrir mucas veces sino solo una vez 
             //Con esto uso la ventana principal como padre y quede dentro de la principal (Container true). 
             ventana.MdiParent = this;
             //para este caso no se puede usar el showdialog porque la ventana de atrás debe seguir teniendo control.  
+            ventana.Show();
+        }
+
+        private void tstrip_Modificar_Archivos_Click(object sender, EventArgs e)
+        {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(Frm_ModificarArticulo))
+                    return;
+            }
+
+            Frm_ModificarArticulo ventana = new Frm_ModificarArticulo();
+            ventana.MdiParent = this;
             ventana.Show();
         }
     }
