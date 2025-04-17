@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient; //5. libreria para establecer la conexion y leer los datos de la BDD
-using Dominio; 
+using Dominio;
 
 
 
-namespace TPWinForm_equipo_11A
+
+namespace Negocio
 {
-    internal class ArticuloService
+    public class ArticuloService
     {
         public List<Articulo> listar() //1. Metodo para que lea los registros de la base de datos
         {

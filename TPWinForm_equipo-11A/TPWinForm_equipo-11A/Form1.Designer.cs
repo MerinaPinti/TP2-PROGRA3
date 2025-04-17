@@ -48,9 +48,7 @@
             this.categoríasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btn_Buscar = new System.Windows.Forms.Button();
-            this.dgvArticulos = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -63,7 +61,8 @@
             this.listarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1067, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -74,25 +73,25 @@
             this.tstrip_Modificar_Archivos,
             this.tstrip_Eliminar_Archivos});
             this.tstrip_Archivos.Name = "tstrip_Archivos";
-            this.tstrip_Archivos.Size = new System.Drawing.Size(81, 24);
+            this.tstrip_Archivos.Size = new System.Drawing.Size(66, 20);
             this.tstrip_Archivos.Text = "&Artículos";
             // 
             // tstrip_Agregar_Archivos
             // 
             this.tstrip_Agregar_Archivos.Name = "tstrip_Agregar_Archivos";
-            this.tstrip_Agregar_Archivos.Size = new System.Drawing.Size(156, 26);
+            this.tstrip_Agregar_Archivos.Size = new System.Drawing.Size(125, 22);
             this.tstrip_Agregar_Archivos.Text = "Agregar";
             // 
             // tstrip_Modificar_Archivos
             // 
             this.tstrip_Modificar_Archivos.Name = "tstrip_Modificar_Archivos";
-            this.tstrip_Modificar_Archivos.Size = new System.Drawing.Size(156, 26);
+            this.tstrip_Modificar_Archivos.Size = new System.Drawing.Size(125, 22);
             this.tstrip_Modificar_Archivos.Text = "Modificar";
             // 
             // tstrip_Eliminar_Archivos
             // 
             this.tstrip_Eliminar_Archivos.Name = "tstrip_Eliminar_Archivos";
-            this.tstrip_Eliminar_Archivos.Size = new System.Drawing.Size(156, 26);
+            this.tstrip_Eliminar_Archivos.Size = new System.Drawing.Size(125, 22);
             this.tstrip_Eliminar_Archivos.Text = "Eliminar";
             // 
             // tstrip_Marcas
@@ -102,25 +101,25 @@
             this.tstrip_Modificar_Marcas,
             this.tstrip_Eliminar_Marcas});
             this.tstrip_Marcas.Name = "tstrip_Marcas";
-            this.tstrip_Marcas.Size = new System.Drawing.Size(70, 24);
+            this.tstrip_Marcas.Size = new System.Drawing.Size(57, 20);
             this.tstrip_Marcas.Text = "Ma&rcas";
             // 
             // tstrip_Agregar_Marcas
             // 
             this.tstrip_Agregar_Marcas.Name = "tstrip_Agregar_Marcas";
-            this.tstrip_Agregar_Marcas.Size = new System.Drawing.Size(156, 26);
+            this.tstrip_Agregar_Marcas.Size = new System.Drawing.Size(125, 22);
             this.tstrip_Agregar_Marcas.Text = "Agregar";
             // 
             // tstrip_Modificar_Marcas
             // 
             this.tstrip_Modificar_Marcas.Name = "tstrip_Modificar_Marcas";
-            this.tstrip_Modificar_Marcas.Size = new System.Drawing.Size(156, 26);
+            this.tstrip_Modificar_Marcas.Size = new System.Drawing.Size(125, 22);
             this.tstrip_Modificar_Marcas.Text = "Modificar";
             // 
             // tstrip_Eliminar_Marcas
             // 
             this.tstrip_Eliminar_Marcas.Name = "tstrip_Eliminar_Marcas";
-            this.tstrip_Eliminar_Marcas.Size = new System.Drawing.Size(156, 26);
+            this.tstrip_Eliminar_Marcas.Size = new System.Drawing.Size(125, 22);
             this.tstrip_Eliminar_Marcas.Text = "Eliminar";
             // 
             // tstrip_Categorias
@@ -130,25 +129,25 @@
             this.tstrip_Modificar_Categorias,
             this.tstrip_Eliminar_Categorias});
             this.tstrip_Categorias.Name = "tstrip_Categorias";
-            this.tstrip_Categorias.Size = new System.Drawing.Size(94, 24);
+            this.tstrip_Categorias.Size = new System.Drawing.Size(75, 20);
             this.tstrip_Categorias.Text = "Cate&gorías";
             // 
             // tstrip_Agregar_Categorias
             // 
             this.tstrip_Agregar_Categorias.Name = "tstrip_Agregar_Categorias";
-            this.tstrip_Agregar_Categorias.Size = new System.Drawing.Size(156, 26);
+            this.tstrip_Agregar_Categorias.Size = new System.Drawing.Size(125, 22);
             this.tstrip_Agregar_Categorias.Text = "Agregar";
             // 
             // tstrip_Modificar_Categorias
             // 
             this.tstrip_Modificar_Categorias.Name = "tstrip_Modificar_Categorias";
-            this.tstrip_Modificar_Categorias.Size = new System.Drawing.Size(156, 26);
+            this.tstrip_Modificar_Categorias.Size = new System.Drawing.Size(125, 22);
             this.tstrip_Modificar_Categorias.Text = "Modificar";
             // 
             // tstrip_Eliminar_Categorias
             // 
             this.tstrip_Eliminar_Categorias.Name = "tstrip_Eliminar_Categorias";
-            this.tstrip_Eliminar_Categorias.Size = new System.Drawing.Size(156, 26);
+            this.tstrip_Eliminar_Categorias.Size = new System.Drawing.Size(125, 22);
             this.tstrip_Eliminar_Categorias.Text = "Eliminar";
             // 
             // listarToolStripMenuItem
@@ -158,76 +157,62 @@
             this.marcasToolStripMenuItem,
             this.categoríasToolStripMenuItem});
             this.listarToolStripMenuItem.Name = "listarToolStripMenuItem";
-            this.listarToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
+            this.listarToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.listarToolStripMenuItem.Text = "Lista&r";
             // 
             // archivosToolStripMenuItem
             // 
             this.archivosToolStripMenuItem.Name = "archivosToolStripMenuItem";
-            this.archivosToolStripMenuItem.Size = new System.Drawing.Size(163, 26);
-            this.archivosToolStripMenuItem.Text = "Archivos";
+            this.archivosToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.archivosToolStripMenuItem.Text = "Artículos";
+            this.archivosToolStripMenuItem.Click += new System.EventHandler(this.archivosToolStripMenuItem_Click);
             // 
             // marcasToolStripMenuItem
             // 
             this.marcasToolStripMenuItem.Name = "marcasToolStripMenuItem";
-            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(163, 26);
+            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.marcasToolStripMenuItem.Text = "Marcas";
             // 
             // categoríasToolStripMenuItem
             // 
             this.categoríasToolStripMenuItem.Name = "categoríasToolStripMenuItem";
-            this.categoríasToolStripMenuItem.Size = new System.Drawing.Size(163, 26);
+            this.categoríasToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.categoríasToolStripMenuItem.Text = "Categorías";
             // 
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(757, 5);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Location = new System.Drawing.Point(568, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(233, 22);
+            this.textBox1.Size = new System.Drawing.Size(176, 20);
             this.textBox1.TabIndex = 1;
             // 
             // btn_Buscar
             // 
             this.btn_Buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Buscar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Buscar.Image")));
-            this.btn_Buscar.Location = new System.Drawing.Point(1007, 1);
-            this.btn_Buscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Buscar.Location = new System.Drawing.Point(755, 1);
             this.btn_Buscar.Name = "btn_Buscar";
-            this.btn_Buscar.Size = new System.Drawing.Size(44, 30);
+            this.btn_Buscar.Size = new System.Drawing.Size(33, 24);
             this.btn_Buscar.TabIndex = 2;
             this.btn_Buscar.UseVisualStyleBackColor = true;
             // 
-            // dgvArticulos
-            // 
-            this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvArticulos.Location = new System.Drawing.Point(50, 78);
-            this.dgvArticulos.Name = "dgvArticulos";
-            this.dgvArticulos.RowHeadersWidth = 51;
-            this.dgvArticulos.RowTemplate.Height = 24;
-            this.dgvArticulos.Size = new System.Drawing.Size(628, 379);
-            this.dgvArticulos.TabIndex = 3;
-            // 
             // frm_Principal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.dgvArticulos);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btn_Buscar);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_Principal";
             this.Text = "Gestión de Artículos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frm_Principal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,7 +239,6 @@
         private System.Windows.Forms.ToolStripMenuItem archivosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem marcasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem categoríasToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dgvArticulos;
     }
 }
 
