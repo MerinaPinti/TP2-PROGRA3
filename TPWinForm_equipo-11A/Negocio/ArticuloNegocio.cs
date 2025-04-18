@@ -31,8 +31,11 @@ namespace Negocio
             {
                 //7. una vez creados los objetos los tengo que configurar
                 //7a cadena de conexion. indica la direccion de la BDD que vamos a usar
+
+                //CONEXION JOHAN
+                conexion.ConnectionString = "server=localhost,1433; database=CATALOGO_P3_DB; user id=sa; password=Johann123";
                 //CONEXIÓN MERI
-                conexion.ConnectionString = "server=.\\SQLEXPRESS01; database=CATALOGO_P3_DB; integrated security=true";
+                //conexion.ConnectionString = "server=.\\SQLEXPRESS01; database=CATALOGO_P3_DB; integrated security=true";
                 //CONEXION NORMAL
                 //conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
                 //7b configuracion del comando de texto

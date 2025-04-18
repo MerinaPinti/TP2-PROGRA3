@@ -111,6 +111,7 @@
             this.tstrip_Agregar_Marcas.Name = "tstrip_Agregar_Marcas";
             this.tstrip_Agregar_Marcas.Size = new System.Drawing.Size(180, 22);
             this.tstrip_Agregar_Marcas.Text = "Agregar";
+            this.tstrip_Agregar_Marcas.Click += new System.EventHandler(this.tstrip_Agregar_Marcas_Click);
             // 
             // tstrip_Modificar_Marcas
             // 
@@ -137,19 +138,19 @@
             // tstrip_Agregar_Categorias
             // 
             this.tstrip_Agregar_Categorias.Name = "tstrip_Agregar_Categorias";
-            this.tstrip_Agregar_Categorias.Size = new System.Drawing.Size(125, 22);
+            this.tstrip_Agregar_Categorias.Size = new System.Drawing.Size(180, 22);
             this.tstrip_Agregar_Categorias.Text = "Agregar";
             // 
             // tstrip_Modificar_Categorias
             // 
             this.tstrip_Modificar_Categorias.Name = "tstrip_Modificar_Categorias";
-            this.tstrip_Modificar_Categorias.Size = new System.Drawing.Size(125, 22);
+            this.tstrip_Modificar_Categorias.Size = new System.Drawing.Size(180, 22);
             this.tstrip_Modificar_Categorias.Text = "Modificar";
             // 
             // tstrip_Eliminar_Categorias
             // 
             this.tstrip_Eliminar_Categorias.Name = "tstrip_Eliminar_Categorias";
-            this.tstrip_Eliminar_Categorias.Size = new System.Drawing.Size(125, 22);
+            this.tstrip_Eliminar_Categorias.Size = new System.Drawing.Size(180, 22);
             this.tstrip_Eliminar_Categorias.Text = "Eliminar";
             // 
             // listarToolStripMenuItem

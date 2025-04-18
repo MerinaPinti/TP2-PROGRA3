@@ -90,5 +90,16 @@ namespace TPWinForm_equipo_11A
             ventana.MdiParent = this;
             ventana.Show();
         }
+
+        private void tstrip_Agregar_Marcas_Click(object sender, EventArgs e)
+        {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(Frm_AgregarMarca)) return;
+            }
+            Frm_AgregarMarca ventana = new Frm_AgregarMarca();
+            ventana.MdiParent = this;
+            ventana.Show();
+        }
     }
 }

@@ -49,7 +49,7 @@
             this.pb_articulos.Location = new System.Drawing.Point(814, 96);
             this.pb_articulos.Name = "pb_articulos";
             this.pb_articulos.Size = new System.Drawing.Size(350, 356);
-            this.pb_articulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pb_articulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_articulos.TabIndex = 1;
             this.pb_articulos.TabStop = false;
             // 
@@ -67,7 +67,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_listadoArticulos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_articulos)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
