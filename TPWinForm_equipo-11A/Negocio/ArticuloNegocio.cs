@@ -38,7 +38,7 @@ namespace Negocio
                 //7b configuracion del comando de texto
                 comando.CommandType = System.Data.CommandType.Text;
                 //7c configuracion del contenido del texto (consulta) que va a contener el comando
-                comando.CommandText = "SELECT A.ID, A.Codigo, A.Nombre, A.Descripcion, M.ID, C.ID, M.Descripcion AS Marca, C.Descripcion AS Categoria, A.Precio, I.ImagenUrl FROM ARTICULOS A INNER JOIN MARCAS M ON A.IDMarca = M.ID INNER JOIN CATEGORIAS C ON A.IDCategoria = C.ID LEFT JOIN IMAGENES I ON A.ID = I.IDArticulo";
+                comando.CommandText = "SELECT A.ID, A.Codigo, A.Nombre, A.Descripcion, M.Descripcion AS Marca, C.Descripcion AS Categoria, A.Precio, I.ImagenUrl FROM ARTICULOS A INNER JOIN MARCAS M ON A.IDMarca = M.ID INNER JOIN CATEGORIAS C ON A.IDCategoria = C.ID LEFT JOIN IMAGENES I ON A.ID = I.IDArticulo";
 
                 //comando.CommandText = "SELECT A.ID, A.Codigo, A.Nombre, A.Descripcion, M.Descripcion AS Marca, C.Descripcion AS Categoria, A.Precio FROM ARTICULOS A INNER JOIN MARCAS M ON A.IDMarca = M.ID INNER JOIN CATEGORIAS C ON A.IDCategoria = C.ID";
 
@@ -55,16 +55,16 @@ namespace Negocio
                     //9. creo un objeto auxiliar
                     Articulo aux = new Articulo();
                     //Le mandamos posición de la tabla 
-                    aux.ID = lector.GetInt32(0);
+                    aux.ID = (int)lector["Id"];
                     aux.Codigo = (string)lector["Codigo"];
                     aux.Nombre = (string)lector["Nombre"];
                     aux.Descripcion = (string)lector["Descripcion"];
                     aux.Marca = new Marcas();
-                    aux.Marca.ID = lector.GetInt32(4); 
+                    //aux.Marca.ID = lector.GetInt32(4); 
                     aux.Marca.Descripcion = lector["Marca"].ToString();
                     aux.Categoria = new Categorias();
                     //Se hizo un override a la función TOSTRING para que devuelva la descripción en ambos casos. No se realiza casteo porque al trabajar con un objeto directamente no es posible 
-                    aux.Categoria.ID = lector.GetInt32(5);
+                    //aux.Categoria.ID = lector.GetInt32(5);
                     aux.Categoria.Descripcion = lector["Categoria"].ToString();
                     aux.Precio = lector["Precio"] != DBNull.Value ? Convert.ToSingle(lector["Precio"]) : 0;
                     //aux.Precio = (float)lector["Precio"];
