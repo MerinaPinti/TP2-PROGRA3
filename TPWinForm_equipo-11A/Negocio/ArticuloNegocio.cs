@@ -17,7 +17,7 @@ namespace Negocio
     {
         public List<Articulo> listar() //1. Metodo para que lea los registros de la base de datos
         {
-            List<Articulo> lista = new List<Articulo> ();//2. crea la lista
+            /*List<Articulo> lista = new List<Articulo> ();//2. crea la lista
             //6. Una vez que agregue la libreria voy a poder crear los objetos que me permitan usar la BDD
             //6a conexion de la BDD
             SqlConnection conexion = new SqlConnection ();
@@ -98,8 +98,60 @@ namespace Negocio
             {
                 
                 throw ex;
+            }*/
+
+            List<Articulo> lista = new List<Articulo>();
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+
+                datos.setearConsulta("SELECT A.ID, A.Codigo, A.Nombre, A.Descripcion, M.Id AS IDMarca, M.Descripcion AS Marca, C.Id AS IDCategoria, C.Descripcion AS Categoria, A.Precio, I.ImagenUrl FROM ARTICULOS A INNER JOIN MARCAS M ON A.IDMarca = M.ID INNER JOIN CATEGORIAS C ON A.IDCategoria = C.ID LEFT JOIN IMAGENES I ON A.ID = I.IDArticulo");
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Articulo aux = new Articulo();
+                    aux.ID = datos.Lector.GetInt32(0);
+                    aux.Codigo = (string)datos.Lector["Codigo"];
+                    aux.Nombre = (string)datos.Lector["Nombre"];
+                    aux.Descripcion = (string)datos.Lector["Descripcion"];
+                    aux.Marca = new Marcas();
+
+                    aux.ID_Marca = Convert.ToInt32(datos.Lector["IDMarca"]);
+
+
+                    //aux.Marca.ID = Convert.ToInt32(datos.Lector["IDMarca"]);
+                    aux.Marca.Descripcion = datos.Lector["Marca"].ToString();
+                    aux.Categoria = new Categorias();
+                    aux.ID_Categoria = Convert.ToInt32(datos.Lector["IDCategoria"]);
+                    //aux.Categoria.ID = Convert.ToInt32(datos.Lector["IDCategoria"]);
+                    aux.Categoria.Descripcion = datos.Lector["Categoria"].ToString();
+                    aux.Precio = datos.Lector["Precio"] != DBNull.Value ? Convert.ToSingle(datos.Lector["Precio"]) : 0;
+                    aux.Imagen = new Imagenes();
+                    aux.Imagen.ImagenUrl = datos.Lector["ImagenUrl"] != DBNull.Value ? datos.Lector["ImagenUrl"].ToString() : null;
+
+                    lista.Add(aux);
+
+
+                }
+
+                return lista;
+
             }
-            
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
         }
+
+
     }
-}
+    }
+
