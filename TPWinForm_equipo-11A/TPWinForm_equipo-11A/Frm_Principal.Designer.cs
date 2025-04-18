@@ -118,6 +118,7 @@
             this.tstrip_Modificar_Marcas.Name = "tstrip_Modificar_Marcas";
             this.tstrip_Modificar_Marcas.Size = new System.Drawing.Size(180, 22);
             this.tstrip_Modificar_Marcas.Text = "Modificar";
+            this.tstrip_Modificar_Marcas.Click += new System.EventHandler(this.tstrip_Modificar_Marcas_Click);
             // 
             // tstrip_Eliminar_Marcas
             // 
