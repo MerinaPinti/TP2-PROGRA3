@@ -148,6 +148,7 @@
             this.tstrip_Modificar_Categorias.Name = "tstrip_Modificar_Categorias";
             this.tstrip_Modificar_Categorias.Size = new System.Drawing.Size(180, 22);
             this.tstrip_Modificar_Categorias.Text = "Modificar";
+            this.tstrip_Modificar_Categorias.Click += new System.EventHandler(this.tstrip_Modificar_Categorias_Click);
             // 
             // tstrip_Eliminar_Categorias
             // 
