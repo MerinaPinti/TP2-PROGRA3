@@ -141,6 +141,7 @@
             this.tstrip_Agregar_Categorias.Name = "tstrip_Agregar_Categorias";
             this.tstrip_Agregar_Categorias.Size = new System.Drawing.Size(180, 22);
             this.tstrip_Agregar_Categorias.Text = "Agregar";
+            this.tstrip_Agregar_Categorias.Click += new System.EventHandler(this.tstrip_Agregar_Categorias_Click);
             // 
             // tstrip_Modificar_Categorias
             // 

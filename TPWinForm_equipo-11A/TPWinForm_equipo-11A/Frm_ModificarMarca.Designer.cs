@@ -84,6 +84,7 @@
             this.Controls.Add(this.lb_NombreArticulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Frm_ModificarMarca";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModificarMarca";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -1,6 +1,6 @@
 ﻿namespace TPWinForm_equipo_11A
 {
-    partial class Frm_AgregarMarca
+    partial class Frm_AgregarCategoria
     {
         /// <summary>
         /// Required designer variable.
@@ -37,10 +37,10 @@
             // bt_Agregar
             // 
             this.bt_Agregar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_Agregar.Location = new System.Drawing.Point(308, 128);
+            this.bt_Agregar.Location = new System.Drawing.Point(310, 127);
             this.bt_Agregar.Name = "bt_Agregar";
             this.bt_Agregar.Size = new System.Drawing.Size(82, 29);
-            this.bt_Agregar.TabIndex = 24;
+            this.bt_Agregar.TabIndex = 29;
             this.bt_Agregar.Text = "Agregar";
             this.bt_Agregar.UseVisualStyleBackColor = true;
             // 
@@ -48,32 +48,32 @@
             // 
             this.lb_Titulo.AutoSize = true;
             this.lb_Titulo.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Titulo.Location = new System.Drawing.Point(22, 40);
+            this.lb_Titulo.Location = new System.Drawing.Point(24, 39);
             this.lb_Titulo.Name = "lb_Titulo";
-            this.lb_Titulo.Size = new System.Drawing.Size(169, 30);
-            this.lb_Titulo.TabIndex = 26;
-            this.lb_Titulo.Text = "Agregar Marca";
+            this.lb_Titulo.Size = new System.Drawing.Size(205, 30);
+            this.lb_Titulo.TabIndex = 30;
+            this.lb_Titulo.Text = "Agregar Categoria";
             // 
             // tb_nombreArt
             // 
             this.tb_nombreArt.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_nombreArt.Location = new System.Drawing.Point(105, 83);
+            this.tb_nombreArt.Location = new System.Drawing.Point(107, 82);
             this.tb_nombreArt.Multiline = true;
             this.tb_nombreArt.Name = "tb_nombreArt";
             this.tb_nombreArt.Size = new System.Drawing.Size(285, 21);
-            this.tb_nombreArt.TabIndex = 13;
+            this.tb_nombreArt.TabIndex = 27;
             // 
             // lb_NombreArticulo
             // 
             this.lb_NombreArticulo.AutoSize = true;
             this.lb_NombreArticulo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_NombreArticulo.Location = new System.Drawing.Point(24, 86);
+            this.lb_NombreArticulo.Location = new System.Drawing.Point(26, 85);
             this.lb_NombreArticulo.Name = "lb_NombreArticulo";
             this.lb_NombreArticulo.Size = new System.Drawing.Size(61, 17);
-            this.lb_NombreArticulo.TabIndex = 17;
+            this.lb_NombreArticulo.TabIndex = 28;
             this.lb_NombreArticulo.Text = "Nombre ";
             // 
-            // Frm_AgregarMarca
+            // Frm_AgregarCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -83,15 +83,16 @@
             this.Controls.Add(this.tb_nombreArt);
             this.Controls.Add(this.lb_NombreArticulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "Frm_AgregarMarca";
+            this.Name = "Frm_AgregarCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AgregarMarca";
+            this.Text = "AgregarCategoria";
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
+
         private System.Windows.Forms.Button bt_Agregar;
         private System.Windows.Forms.Label lb_Titulo;
         private System.Windows.Forms.TextBox tb_nombreArt;

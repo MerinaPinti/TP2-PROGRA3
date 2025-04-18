@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Frm_AgregarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_AgregarCategoria.Designer.cs">
+      <DependentUpon>Frm_AgregarCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_AgregarMarca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Frm_AgregarCategoria.resx">
+      <DependentUpon>Frm_AgregarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_AgregarMarca.resx">
       <DependentUpon>Frm_AgregarMarca.cs</DependentUpon>
     </EmbeddedResource>

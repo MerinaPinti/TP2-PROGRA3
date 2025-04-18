@@ -112,5 +112,16 @@ namespace TPWinForm_equipo_11A
             ventana.MdiParent = this;
             ventana.Show();
         }
+
+        private void tstrip_Agregar_Categorias_Click(object sender, EventArgs e)
+        {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(Frm_AgregarCategoria)) return;
+            }
+            Frm_AgregarCategoria ventana = new Frm_AgregarCategoria();
+            ventana.MdiParent = this;
+            ventana.Show();
+        }
     }
 }
