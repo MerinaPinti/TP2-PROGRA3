@@ -157,10 +157,13 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
+                
                 datos.setearConsulta("Insert into ARTICULOS (Codigo, Nombre, Descripcion, Precio, IDMarca, IDCategoria) values ('" + nuevo.Codigo + "','" + nuevo.Nombre + "','" + nuevo.Descripcion + "'," + nuevo.Precio + ", @IDMarca, @IDCategoria)");
                 datos.setearParametros("@IDMarca", nuevo.Marca.ID);
                 datos.setearParametros("@IdCategoria", nuevo.Categoria.ID);
                 datos.ejecutarAccion();
+
+
             }
             catch (Exception ex)
             {
@@ -170,6 +173,32 @@ namespace Negocio
             {
                 datos.cerrarConexion();
             }
+
+            datos = new AccesoDatos();
+
+            try
+            {
+                if (!string.IsNullOrEmpty(nuevo.Imagen.ImagenUrl))
+                {
+
+                    datos.setearConsulta(@"insert into IMAGENES (IdArticulo, ImagenUrl) values (@IdArticulo, @ImagenUrl)");
+                    datos.setearParametros("@IdArticulo", nuevo.ID);
+                    datos.setearParametros("@ImagenUrl", nuevo.Imagen.ImagenUrl);
+                    datos.ejecutarAccion();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+           
+
         }
 
     }
