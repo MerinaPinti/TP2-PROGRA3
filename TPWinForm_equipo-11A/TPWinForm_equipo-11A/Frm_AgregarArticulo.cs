@@ -37,6 +37,10 @@ namespace TPWinForm_equipo_11A
                 nuevo.Marca = (Marcas)cBox_Marca.SelectedItem;
                 nuevo.Categoria = (Categorias)cBox_Categoria.SelectedItem;
                 nuevo.Precio = float.Parse(tb_Precio.Text);
+
+                nuevo.Imagen = new Imagenes();
+                nuevo.Imagen.ImagenUrl = tb_urlImagen.Text;
+                
                 negocio.agregarArticulo(nuevo);
                 MessageBox.Show("Articulo agregado");
 
@@ -63,6 +67,36 @@ namespace TPWinForm_equipo_11A
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tb_urlImagen_Leave(object sender, EventArgs e)
+        {
+            cargarImagen(tb_urlImagen.Text);
+
+        }
+
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                if (!string.IsNullOrEmpty(imagen))
+                {
+                    pb_AgregarImagenArt.Load(imagen);
+                }
+                else
+                {
+                    pb_AgregarImagenArt.Load("https://codigogenesis.com/genesis/2022/04/imagen-placeholder-por-defecto-WooCommerce.png");
+                }
+            }
+            catch (Exception)
+            {
+                pb_AgregarImagenArt.Load("https://codigogenesis.com/genesis/2022/04/imagen-placeholder-por-defecto-WooCommerce.png");
             }
         }
     }
