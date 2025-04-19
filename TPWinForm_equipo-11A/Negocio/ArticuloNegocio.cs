@@ -106,7 +106,7 @@ namespace Negocio
             try
             {
 
-                datos.setearConsulta("SELECT A.ID, A.Codigo, A.Nombre, A.Descripcion, M.Id AS IDMarca, M.Descripcion AS Marca, C.Id AS IDCategoria, C.Descripcion AS Categoria, A.Precio, I.ImagenUrl FROM ARTICULOS A INNER JOIN MARCAS M ON A.IDMarca = M.ID INNER JOIN CATEGORIAS C ON A.IDCategoria = C.ID LEFT JOIN IMAGENES I ON A.ID = I.IDArticulo");
+                datos.setearConsulta("select A.Id,A.nombre, A.codigo, A.descripcion, A.IdCategoria, A.IdMarca, M.Descripcion as Marca, C.Descripcion as Categoria, A.Precio, I.ImagenUrl FROM ARTICULOS A INNER JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id LEFT JOIN IMAGENES I ON A.Id = I.IdArticulo");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
