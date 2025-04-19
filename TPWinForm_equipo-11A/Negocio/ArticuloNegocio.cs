@@ -7,6 +7,7 @@ using System.Data.SqlClient; //5. libreria para establecer la conexion y leer lo
 using System.Xml.Linq;
 using Dominio;
 using System.Net.Configuration;
+using Negocio;
 
 
 
@@ -152,13 +153,19 @@ namespace Negocio
         }
         public void agregararticulo(Articulo nuevo)
         {
+            AccesoDatos datos = new AccesoDatos();
             try
             {
-
+                datos.setearConsulta("Insert into ARTICULOS (Codigo, Nombre, Descripcion, Precio) values ('"+ nuevo.Codigo + "','" + nuevo.Nombre +"','" + nuevo.Descripcion +"',0)");
+                datos.ejecutarAccion();
             }
             catch (Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
             }
         }
 
