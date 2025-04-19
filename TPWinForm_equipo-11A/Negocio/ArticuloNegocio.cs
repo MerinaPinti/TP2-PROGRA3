@@ -156,7 +156,7 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("Insert into ARTICULOS (Codigo, Nombre, Descripcion, Precio) values ('"+ nuevo.Codigo + "','" + nuevo.Nombre +"','" + nuevo.Descripcion +"',0)");
+                datos.setearConsulta("Insert into ARTICULOS (Codigo, Nombre, Descripcion, Precio) values ('" + nuevo.Codigo + "','" + nuevo.Nombre + "','" + nuevo.Descripcion + "'," + nuevo.Precio + ")");
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
