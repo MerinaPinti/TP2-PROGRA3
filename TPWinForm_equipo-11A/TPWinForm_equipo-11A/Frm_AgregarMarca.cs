@@ -40,5 +40,10 @@ namespace TPWinForm_equipo_11A
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void btn_Cancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

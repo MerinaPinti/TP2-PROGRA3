@@ -32,12 +32,13 @@
             this.lb_Titulo = new System.Windows.Forms.Label();
             this.tb_nombreCat = new System.Windows.Forms.TextBox();
             this.lb_NombreArticulo = new System.Windows.Forms.Label();
+            this.btn_Cancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bt_Agregar
             // 
             this.bt_Agregar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_Agregar.Location = new System.Drawing.Point(413, 156);
+            this.bt_Agregar.Location = new System.Drawing.Point(287, 156);
             this.bt_Agregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bt_Agregar.Name = "bt_Agregar";
             this.bt_Agregar.Size = new System.Drawing.Size(109, 36);
@@ -78,11 +79,23 @@
             this.lb_NombreArticulo.TabIndex = 28;
             this.lb_NombreArticulo.Text = "Nombre ";
             // 
+            // btn_Cancelar
+            // 
+            this.btn_Cancelar.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cancelar.Location = new System.Drawing.Point(413, 156);
+            this.btn_Cancelar.Name = "btn_Cancelar";
+            this.btn_Cancelar.Size = new System.Drawing.Size(109, 36);
+            this.btn_Cancelar.TabIndex = 31;
+            this.btn_Cancelar.Text = "Cancelar";
+            this.btn_Cancelar.UseVisualStyleBackColor = true;
+            this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
+            // 
             // Frm_AgregarCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(556, 222);
+            this.Controls.Add(this.btn_Cancelar);
             this.Controls.Add(this.bt_Agregar);
             this.Controls.Add(this.lb_Titulo);
             this.Controls.Add(this.tb_nombreCat);
@@ -103,5 +116,6 @@
         private System.Windows.Forms.Label lb_Titulo;
         private System.Windows.Forms.TextBox tb_nombreCat;
         private System.Windows.Forms.Label lb_NombreArticulo;
+        private System.Windows.Forms.Button btn_Cancelar;
     }
 }
