@@ -118,6 +118,27 @@ namespace Negocio
             }
         }
 
+        public void modificarCategoria(Categorias categorias)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("UPDATE CATEGORIAS set Descripcion = @descripcion WHERE Id = @id");
+                datos.setearParametros("@descripcion", categorias.Descripcion);
+                datos.setearParametros("@id", categorias.ID);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
 
     }
 
