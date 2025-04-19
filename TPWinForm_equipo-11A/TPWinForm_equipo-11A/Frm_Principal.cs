@@ -31,7 +31,7 @@ namespace TPWinForm_equipo_11A
         {
             foreach (var item in Application.OpenForms)
             {
-                if (item.GetType() == typeof(Frm_AgregarArticulo))
+                if (item.GetType() == typeof(Frm_ListarArticulos))
                     return;
             }
             Frm_ListarArticulos ventana = new Frm_ListarArticulos();
