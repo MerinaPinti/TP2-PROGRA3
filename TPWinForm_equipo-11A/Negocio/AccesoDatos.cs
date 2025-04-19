@@ -29,9 +29,9 @@ namespace Negocio
                 //CONEXIÓN MERI
                 //"server=.\\SQLEXPRESS01; database=CATALOGO_P3_DB; integrated security=true"
                 //CONEXION NORMAL
-                "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true"
+                //"server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true"
                 //CONEXION JOHAN
-                //"server=localhost,1433; database=CATALOGO_P3_DB; user id=sa; password=Johann123"
+                "server=localhost,1433; database=CATALOGO_P3_DB; user id=sa; password=Johann123"
 
                 );
             comando = new SqlCommand();
@@ -75,6 +75,11 @@ namespace Negocio
 
                 throw ex;
             }
+        }
+
+        public void setearParametros(string nombre, object valor)
+        {
+            comando.Parameters.AddWithValue(nombre, valor);
         }
 
         public void cerrarConexion()

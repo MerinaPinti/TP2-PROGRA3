@@ -37,8 +37,7 @@ namespace TPWinForm_equipo_11A
                 nuevo.Marca = (Marcas)cBox_Marca.SelectedItem;
                 nuevo.Categoria = (Categorias)cBox_Categoria.SelectedItem;
                 nuevo.Precio = float.Parse(tb_Precio.Text);
-
-                negocio.agregararticulo(nuevo);
+                negocio.agregarArticulo(nuevo);
                 MessageBox.Show("Articulo agregado");
 
                 Close();

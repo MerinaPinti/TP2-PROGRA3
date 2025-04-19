@@ -129,9 +129,10 @@ namespace Negocio
                     aux.Categoria.Descripcion = datos.Lector["Categoria"].ToString();
                     aux.Precio = datos.Lector["Precio"] != DBNull.Value ? Convert.ToSingle(datos.Lector["Precio"]) : 0;
                     aux.Imagen = new Imagenes();
-                    aux.Imagen.ImagenUrl = datos.Lector["ImagenUrl"] != DBNull.Value ? datos.Lector["ImagenUrl"].ToString() : null;
+                    aux.Imagen.ImagenUrl = datos.Lector["ImagenUrl"] != DBNull.Value ? datos.Lector["ImagenUrl"].ToString() : "";
+                    
 
-                    lista.Add(aux);
+                        lista.Add(aux);
 
 
                 }
@@ -151,12 +152,14 @@ namespace Negocio
             }
 
         }
-        public void agregararticulo(Articulo nuevo)
+        public void agregarArticulo(Articulo nuevo)
         {
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("Insert into ARTICULOS (Codigo, Nombre, Descripcion, Precio) values ('" + nuevo.Codigo + "','" + nuevo.Nombre + "','" + nuevo.Descripcion + "'," + nuevo.Precio + ")");
+                datos.setearConsulta("Insert into ARTICULOS (Codigo, Nombre, Descripcion, Precio, IDMarca, IDCategoria) values ('" + nuevo.Codigo + "','" + nuevo.Nombre + "','" + nuevo.Descripcion + "'," + nuevo.Precio + ", @IDMarca, @IDCategoria)");
+                datos.setearParametros("@IDMarca", nuevo.Marca.ID);
+                datos.setearParametros("@IdCategoria", nuevo.Categoria.ID);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)

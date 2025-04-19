@@ -233,7 +233,6 @@
             this.Controls.Add(this.lb_NombreArticulo);
             this.Controls.Add(this.lb_Cod_Articulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Frm_AgregarArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Artículo";
