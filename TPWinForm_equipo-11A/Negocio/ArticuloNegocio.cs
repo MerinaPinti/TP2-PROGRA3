@@ -150,7 +150,17 @@ namespace Negocio
             }
 
         }
+        public void agregararticulo(Articulo nuevo)
+        {
+            try
+            {
 
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
     }
     }
