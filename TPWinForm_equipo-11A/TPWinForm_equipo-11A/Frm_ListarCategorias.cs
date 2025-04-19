@@ -24,5 +24,19 @@ namespace TPWinForm_equipo_11A
             CategoriaNegocio negocio = new CategoriaNegocio();
             dgv_ListarCategorias.DataSource = negocio.listar();
         }
+
+        private void btn_modificar_Click(object sender, EventArgs e)
+        {
+            Categorias nuevo = new Categorias();
+            CategoriaNegocio negocio = new CategoriaNegocio();
+
+            Categorias seleccionado;
+            seleccionado = (Categorias)dgv_ListarCategorias.CurrentRow.DataBoundItem;
+
+            //Al formulario le vamos a pasar por parámetro el objeto que queremos modificar y se lo pasamos al segundo constructor de la clase
+            Frm_AgregarCategoria modificar = new Frm_AgregarCategoria(seleccionado);
+            modificar.ShowDialog();
+            negocio.agregarCategoria(nuevo);
+        }
     }
 }
