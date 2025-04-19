@@ -59,7 +59,16 @@ namespace TPWinForm_equipo_11A
 
         private void marcasToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(Frm_ListarMarcas))
+                    return;
+            }
+            Frm_ListarMarcas ventana = new Frm_ListarMarcas();
 
+            ventana.MdiParent = this;
+
+            ventana.Show();
         }
 
         //LISTAR CATEGORÍAS /// Evento que se acciona cuando presionamos "LISTAR->CATEGORÍAS" de Toolstrip 

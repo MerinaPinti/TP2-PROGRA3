@@ -58,6 +58,12 @@
     <Compile Include="Frm_AgregarMarca.Designer.cs">
       <DependentUpon>Frm_AgregarMarca.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_ListarMarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ListarMarcas.Designer.cs">
+      <DependentUpon>Frm_ListarMarcas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_ModificarArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_AgregarMarca.resx">
       <DependentUpon>Frm_AgregarMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ListarMarcas.resx">
+      <DependentUpon>Frm_ListarMarcas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_ModificarArticulo.resx">
       <DependentUpon>Frm_ModificarArticulo.cs</DependentUpon>
