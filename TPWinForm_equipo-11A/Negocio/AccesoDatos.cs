@@ -27,11 +27,11 @@ namespace Negocio
             //Cuando lo creo le asigno la conexión directamente
             conexion = new SqlConnection(
                 //CONEXIÓN MERI
-                //"server=.\\SQLEXPRESS01; database=CATALOGO_P3_DB; integrated security=true"
+                "server=.\\SQLEXPRESS01; database=CATALOGO_P3_DB; integrated security=true"
                 //CONEXION NORMAL
                 //"server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true"
                 //CONEXION JOHAN
-                "server=localhost,1433; database=CATALOGO_P3_DB; user id=sa; password=Johann123"
+                //"server=localhost,1433; database=CATALOGO_P3_DB; user id=sa; password=Johann123"
 
                 );
             comando = new SqlCommand();
@@ -92,5 +92,25 @@ namespace Negocio
             conexion.Close();
 
         }
+
+        public int ejecutarScalar()
+        {
+            comando.Connection = conexion;
+            try
+            {
+                conexion.Open();
+                object resultado = comando.ExecuteScalar();
+                return Convert.ToInt32(resultado);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
+
     }
 }

@@ -154,7 +154,7 @@ namespace Negocio
         }
         public void agregarArticulo(Articulo nuevo)
         {
-            AccesoDatos datos = new AccesoDatos();
+           /* AccesoDatos datos = new AccesoDatos();
             try
             {
                 
@@ -163,6 +163,23 @@ namespace Negocio
                 datos.setearParametros("@IdCategoria", nuevo.Categoria.ID);
                 datos.ejecutarAccion();
 
+                if (!string.IsNullOrEmpty(nuevo.Imagen.ImagenUrl))
+                {
+
+                    datos.setearConsulta(@"insert into IMAGENES (IdArticulo, ImagenUrl) values (@IdArticulo, @ImagenUrl)");
+                    datos.setearParametros("@IdArticulo", nuevo.ID);
+                    datos.setearParametros("@ImagenUrl", nuevo.Imagen.ImagenUrl);
+                    nuevo.ID = datos.ejecutarScalar();
+                    if (!string.IsNullOrEmpty(nuevo.Imagen.ImagenUrl))
+                    {
+
+                        datos.setearConsulta(@"insert into IMAGENES (IdArticulo, ImagenUrl) values (@IdArticulo, @ImagenUrl)");
+                        datos.setearParametros("@IdArticulo", nuevo.ID);
+                        datos.setearParametros("@ImagenUrl", nuevo.Imagen.ImagenUrl);
+                        datos.ejecutarAccion();
+                    }
+                }
+
 
             }
             catch (Exception ex)
@@ -173,15 +190,31 @@ namespace Negocio
             {
                 datos.cerrarConexion();
             }
-
-            datos = new AccesoDatos();
+           */
+       
+            AccesoDatos datos = new AccesoDatos();
 
             try
             {
+                // Insertar artículo y obtener el ID recién creado
+                datos.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, Precio, IDMarca, IDCategoria) " +
+                                     "VALUES (@Codigo, @Nombre, @Descripcion, @Precio, @IDMarca, @IDCategoria); " +
+                                     "SELECT SCOPE_IDENTITY();");
+
+                datos.setearParametros("@Codigo", nuevo.Codigo);
+                datos.setearParametros("@Nombre", nuevo.Nombre);
+                datos.setearParametros("@Descripcion", nuevo.Descripcion);
+                datos.setearParametros("@Precio", nuevo.Precio);
+                datos.setearParametros("@IDMarca", nuevo.Marca.ID);
+                datos.setearParametros("@IDCategoria", nuevo.Categoria.ID);
+
+                // Obtener el ID generado del artículo
+                nuevo.ID = datos.ejecutarScalar();
+
+                // Si hay imagen, insertarla con el ID del artículo
                 if (!string.IsNullOrEmpty(nuevo.Imagen.ImagenUrl))
                 {
-
-                    datos.setearConsulta(@"insert into IMAGENES (IdArticulo, ImagenUrl) values (@IdArticulo, @ImagenUrl)");
+                    datos.setearConsulta("INSERT INTO IMAGENES (IdArticulo, ImagenUrl) VALUES (@IdArticulo, @ImagenUrl)");
                     datos.setearParametros("@IdArticulo", nuevo.ID);
                     datos.setearParametros("@ImagenUrl", nuevo.Imagen.ImagenUrl);
                     datos.ejecutarAccion();
@@ -189,18 +222,18 @@ namespace Negocio
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
             finally
             {
                 datos.cerrarConexion();
             }
-
-           
-
         }
 
+
+
     }
-    }
+
+}
+    
 
