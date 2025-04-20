@@ -61,8 +61,8 @@
             this.listarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(619, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(825, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -73,27 +73,27 @@
             this.tstrip_Modificar_Archivos,
             this.tstrip_Eliminar_Archivos});
             this.tstrip_Archivos.Name = "tstrip_Archivos";
-            this.tstrip_Archivos.Size = new System.Drawing.Size(66, 20);
+            this.tstrip_Archivos.Size = new System.Drawing.Size(81, 24);
             this.tstrip_Archivos.Text = "&Artículos";
             // 
             // tstrip_Agregar_Archivos
             // 
             this.tstrip_Agregar_Archivos.Name = "tstrip_Agregar_Archivos";
-            this.tstrip_Agregar_Archivos.Size = new System.Drawing.Size(180, 22);
+            this.tstrip_Agregar_Archivos.Size = new System.Drawing.Size(156, 26);
             this.tstrip_Agregar_Archivos.Text = "Agregar";
             this.tstrip_Agregar_Archivos.Click += new System.EventHandler(this.tstrip_Agregar_Archivos_Click);
             // 
             // tstrip_Modificar_Archivos
             // 
             this.tstrip_Modificar_Archivos.Name = "tstrip_Modificar_Archivos";
-            this.tstrip_Modificar_Archivos.Size = new System.Drawing.Size(180, 22);
+            this.tstrip_Modificar_Archivos.Size = new System.Drawing.Size(156, 26);
             this.tstrip_Modificar_Archivos.Text = "Modificar";
             this.tstrip_Modificar_Archivos.Click += new System.EventHandler(this.tstrip_Modificar_Archivos_Click);
             // 
             // tstrip_Eliminar_Archivos
             // 
             this.tstrip_Eliminar_Archivos.Name = "tstrip_Eliminar_Archivos";
-            this.tstrip_Eliminar_Archivos.Size = new System.Drawing.Size(180, 22);
+            this.tstrip_Eliminar_Archivos.Size = new System.Drawing.Size(156, 26);
             this.tstrip_Eliminar_Archivos.Text = "Eliminar";
             // 
             // tstrip_Marcas
@@ -103,28 +103,29 @@
             this.tstrip_Modificar_Marcas,
             this.tstrip_Eliminar_Marcas});
             this.tstrip_Marcas.Name = "tstrip_Marcas";
-            this.tstrip_Marcas.Size = new System.Drawing.Size(57, 20);
+            this.tstrip_Marcas.Size = new System.Drawing.Size(70, 24);
             this.tstrip_Marcas.Text = "Ma&rcas";
             // 
             // tstrip_Agregar_Marcas
             // 
             this.tstrip_Agregar_Marcas.Name = "tstrip_Agregar_Marcas";
-            this.tstrip_Agregar_Marcas.Size = new System.Drawing.Size(180, 22);
+            this.tstrip_Agregar_Marcas.Size = new System.Drawing.Size(224, 26);
             this.tstrip_Agregar_Marcas.Text = "Agregar";
             this.tstrip_Agregar_Marcas.Click += new System.EventHandler(this.tstrip_Agregar_Marcas_Click);
             // 
             // tstrip_Modificar_Marcas
             // 
             this.tstrip_Modificar_Marcas.Name = "tstrip_Modificar_Marcas";
-            this.tstrip_Modificar_Marcas.Size = new System.Drawing.Size(180, 22);
+            this.tstrip_Modificar_Marcas.Size = new System.Drawing.Size(224, 26);
             this.tstrip_Modificar_Marcas.Text = "Modificar";
             this.tstrip_Modificar_Marcas.Click += new System.EventHandler(this.tstrip_Modificar_Marcas_Click);
             // 
             // tstrip_Eliminar_Marcas
             // 
             this.tstrip_Eliminar_Marcas.Name = "tstrip_Eliminar_Marcas";
-            this.tstrip_Eliminar_Marcas.Size = new System.Drawing.Size(180, 22);
+            this.tstrip_Eliminar_Marcas.Size = new System.Drawing.Size(224, 26);
             this.tstrip_Eliminar_Marcas.Text = "Eliminar";
+            this.tstrip_Eliminar_Marcas.Click += new System.EventHandler(this.tstrip_Eliminar_Marcas_Click);
             // 
             // tstrip_Categorias
             // 
@@ -133,27 +134,27 @@
             this.tstrip_Modificar_Categorias,
             this.tstrip_Eliminar_Categorias});
             this.tstrip_Categorias.Name = "tstrip_Categorias";
-            this.tstrip_Categorias.Size = new System.Drawing.Size(75, 20);
+            this.tstrip_Categorias.Size = new System.Drawing.Size(94, 24);
             this.tstrip_Categorias.Text = "Cate&gorías";
             // 
             // tstrip_Agregar_Categorias
             // 
             this.tstrip_Agregar_Categorias.Name = "tstrip_Agregar_Categorias";
-            this.tstrip_Agregar_Categorias.Size = new System.Drawing.Size(180, 22);
+            this.tstrip_Agregar_Categorias.Size = new System.Drawing.Size(156, 26);
             this.tstrip_Agregar_Categorias.Text = "Agregar";
             this.tstrip_Agregar_Categorias.Click += new System.EventHandler(this.tstrip_Agregar_Categorias_Click);
             // 
             // tstrip_Modificar_Categorias
             // 
             this.tstrip_Modificar_Categorias.Name = "tstrip_Modificar_Categorias";
-            this.tstrip_Modificar_Categorias.Size = new System.Drawing.Size(180, 22);
+            this.tstrip_Modificar_Categorias.Size = new System.Drawing.Size(156, 26);
             this.tstrip_Modificar_Categorias.Text = "Modificar";
             this.tstrip_Modificar_Categorias.Click += new System.EventHandler(this.tstrip_Modificar_Categorias_Click);
             // 
             // tstrip_Eliminar_Categorias
             // 
             this.tstrip_Eliminar_Categorias.Name = "tstrip_Eliminar_Categorias";
-            this.tstrip_Eliminar_Categorias.Size = new System.Drawing.Size(180, 22);
+            this.tstrip_Eliminar_Categorias.Size = new System.Drawing.Size(156, 26);
             this.tstrip_Eliminar_Categorias.Text = "Eliminar";
             // 
             // listarToolStripMenuItem
@@ -163,60 +164,63 @@
             this.marcasToolStripMenuItem,
             this.categoríasToolStripMenuItem});
             this.listarToolStripMenuItem.Name = "listarToolStripMenuItem";
-            this.listarToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.listarToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
             this.listarToolStripMenuItem.Text = "Lista&r";
             // 
             // archivosToolStripMenuItem
             // 
             this.archivosToolStripMenuItem.Name = "archivosToolStripMenuItem";
-            this.archivosToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.archivosToolStripMenuItem.Size = new System.Drawing.Size(163, 26);
             this.archivosToolStripMenuItem.Text = "Artículos";
             this.archivosToolStripMenuItem.Click += new System.EventHandler(this.archivosToolStripMenuItem_Click);
             // 
             // marcasToolStripMenuItem
             // 
             this.marcasToolStripMenuItem.Name = "marcasToolStripMenuItem";
-            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(163, 26);
             this.marcasToolStripMenuItem.Text = "Marcas";
             this.marcasToolStripMenuItem.Click += new System.EventHandler(this.marcasToolStripMenuItem_Click);
             // 
             // categoríasToolStripMenuItem
             // 
             this.categoríasToolStripMenuItem.Name = "categoríasToolStripMenuItem";
-            this.categoríasToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.categoríasToolStripMenuItem.Size = new System.Drawing.Size(163, 26);
             this.categoríasToolStripMenuItem.Text = "Categorías";
             this.categoríasToolStripMenuItem.Click += new System.EventHandler(this.categoríasToolStripMenuItem_Click);
             // 
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(387, 4);
+            this.textBox1.Location = new System.Drawing.Point(516, 5);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(176, 20);
+            this.textBox1.Size = new System.Drawing.Size(233, 22);
             this.textBox1.TabIndex = 1;
             // 
             // btn_Buscar
             // 
             this.btn_Buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Buscar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Buscar.Image")));
-            this.btn_Buscar.Location = new System.Drawing.Point(574, 1);
+            this.btn_Buscar.Location = new System.Drawing.Point(765, 1);
+            this.btn_Buscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Buscar.Name = "btn_Buscar";
-            this.btn_Buscar.Size = new System.Drawing.Size(33, 24);
+            this.btn_Buscar.Size = new System.Drawing.Size(44, 30);
             this.btn_Buscar.TabIndex = 2;
             this.btn_Buscar.UseVisualStyleBackColor = true;
             // 
             // frm_Principal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(619, 450);
+            this.ClientSize = new System.Drawing.Size(825, 554);
             this.Controls.Add(this.btn_Buscar);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.MinimumSize = new System.Drawing.Size(635, 489);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(841, 591);
             this.Name = "frm_Principal";
             this.Text = "Gestión de Artículos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

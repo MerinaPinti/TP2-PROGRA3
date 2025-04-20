@@ -43,5 +43,30 @@ namespace TPWinForm_equipo_11A
             }
 
         }
+
+        private void btn_Eliminar_Click(object sender, EventArgs e)
+        {
+            MarcaNegocio negocio = new MarcaNegocio();
+            Marcas seleccionado;
+
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("¿Esta seguro de eliminar esta marca?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Marcas)dgv_ListarMarcas.CurrentRow.DataBoundItem;
+                    negocio.eliminarMarca(seleccionado.ID);
+                    dgv_ListarMarcas.DataSource = negocio.listar();
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }
