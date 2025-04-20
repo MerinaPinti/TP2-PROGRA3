@@ -140,22 +140,23 @@
             // tstrip_Agregar_Categorias
             // 
             this.tstrip_Agregar_Categorias.Name = "tstrip_Agregar_Categorias";
-            this.tstrip_Agregar_Categorias.Size = new System.Drawing.Size(156, 26);
+            this.tstrip_Agregar_Categorias.Size = new System.Drawing.Size(224, 26);
             this.tstrip_Agregar_Categorias.Text = "Agregar";
             this.tstrip_Agregar_Categorias.Click += new System.EventHandler(this.tstrip_Agregar_Categorias_Click);
             // 
             // tstrip_Modificar_Categorias
             // 
             this.tstrip_Modificar_Categorias.Name = "tstrip_Modificar_Categorias";
-            this.tstrip_Modificar_Categorias.Size = new System.Drawing.Size(156, 26);
+            this.tstrip_Modificar_Categorias.Size = new System.Drawing.Size(224, 26);
             this.tstrip_Modificar_Categorias.Text = "Modificar";
             this.tstrip_Modificar_Categorias.Click += new System.EventHandler(this.tstrip_Modificar_Categorias_Click);
             // 
             // tstrip_Eliminar_Categorias
             // 
             this.tstrip_Eliminar_Categorias.Name = "tstrip_Eliminar_Categorias";
-            this.tstrip_Eliminar_Categorias.Size = new System.Drawing.Size(156, 26);
+            this.tstrip_Eliminar_Categorias.Size = new System.Drawing.Size(224, 26);
             this.tstrip_Eliminar_Categorias.Text = "Eliminar";
+            this.tstrip_Eliminar_Categorias.Click += new System.EventHandler(this.tstrip_Eliminar_Categorias_Click);
             // 
             // listarToolStripMenuItem
             // 
@@ -192,7 +193,7 @@
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Location = new System.Drawing.Point(516, 5);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(233, 22);
             this.textBox1.TabIndex = 1;
@@ -202,7 +203,7 @@
             this.btn_Buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Buscar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Buscar.Image")));
             this.btn_Buscar.Location = new System.Drawing.Point(765, 1);
-            this.btn_Buscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Buscar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Buscar.Name = "btn_Buscar";
             this.btn_Buscar.Size = new System.Drawing.Size(44, 30);
             this.btn_Buscar.TabIndex = 2;
@@ -219,7 +220,7 @@
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(841, 591);
             this.Name = "frm_Principal";
             this.Text = "Gestión de Artículos";

@@ -139,7 +139,36 @@ namespace Negocio
             }
         }
 
+        public void eliminarLogico(int ID_categoria)
+        {
+            try
+            {
+                AccesoDatos datos = new AccesoDatos();
+                datos.setearConsulta("update from CATEGORIA set ACTIVO = 0 where Id = @ID_categoria");
+                datos.setearParametros("ID_categoria", ID_categoria);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
 
+                throw ex;
+            }
+        }
+        public void eliminarFisico(int ID_categoria)
+        {
+            try
+            {
+                AccesoDatos datos = new AccesoDatos();
+                datos.setearConsulta("delete from CATEGORIAS where Id = @ID_categoria");
+                datos.setearParametros("ID_categoria", ID_categoria);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 
 }

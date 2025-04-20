@@ -57,5 +57,43 @@ namespace TPWinForm_equipo_11A
                 dgv_ListarCategorias.DataSource = negocio.listar();
             }
         }
+
+        private void btn_Eliminar_Click(object sender, EventArgs e)
+        {
+            eliminarCategoria();
+        }
+
+        private void eliminarCategoria(bool logico = false)
+        {
+            CategoriaNegocio negocio = new CategoriaNegocio();
+            Categorias seleccionado;
+
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("¿Esta seguro de eliminar esta categoria?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Categorias)dgv_ListarCategorias.CurrentRow.DataBoundItem;
+                    if (logico)
+                    {
+                        negocio.eliminarLogico(seleccionado.ID);
+                    }
+                    else
+                    {
+                        negocio.eliminarFisico(seleccionado.ID);
+                    }
+                    dgv_ListarCategorias.DataSource = negocio.listar();
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
     }
 }
