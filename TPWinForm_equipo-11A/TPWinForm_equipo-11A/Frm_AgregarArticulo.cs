@@ -34,9 +34,47 @@ namespace TPWinForm_equipo_11A
                 nuevo.Codigo = tb_codArt.Text;
                 nuevo.Nombre = tb_nombreArt.Text;
                 nuevo.Descripcion = tb_Descrip.Text;
+
+                //Validación caracteres 
+                if (tb_Descrip.Text.Length > 150)
+                {
+                    MessageBox.Show("La descripción no puede tener más de 150 caracteres.");
+                    tb_Descrip.Focus();
+                    return;
+                }
+
+                nuevo.Descripcion = tb_Descrip.Text;
+
+
                 nuevo.Marca = (Marcas)cBox_Marca.SelectedItem;
                 nuevo.Categoria = (Categorias)cBox_Categoria.SelectedItem;
                 nuevo.Precio = float.Parse(tb_Precio.Text);
+
+                //Validación de no ingresar un número negativo 
+                if (string.IsNullOrWhiteSpace(tb_Precio.Text))
+                {
+                    MessageBox.Show("Por favor ingresá un precio.");
+                    tb_Precio.Focus();
+                    return;
+                }
+
+                float precio;
+                if (!float.TryParse(tb_Precio.Text, out precio))
+                {
+                    MessageBox.Show("El precio debe ser un número válido.");
+                    //Se posiciona de nuevo en el text box 
+                    tb_Precio.Focus();
+                    return;
+                }
+
+                if (precio < 0)
+                {
+                    MessageBox.Show("El precio no puede ser negativo.");
+                    tb_Precio.Focus();
+                    return;
+                }
+
+                nuevo.Precio = precio;
 
                 nuevo.Imagen = new Imagenes();
                 nuevo.Imagen.ImagenUrl = tb_urlImagen.Text;

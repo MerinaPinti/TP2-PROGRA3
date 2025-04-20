@@ -36,18 +36,20 @@
             // dgv_ListarMarcas
             // 
             this.dgv_ListarMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_ListarMarcas.Location = new System.Drawing.Point(36, 77);
+            this.dgv_ListarMarcas.Location = new System.Drawing.Point(27, 50);
+            this.dgv_ListarMarcas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgv_ListarMarcas.Name = "dgv_ListarMarcas";
             this.dgv_ListarMarcas.RowHeadersWidth = 51;
             this.dgv_ListarMarcas.RowTemplate.Height = 24;
-            this.dgv_ListarMarcas.Size = new System.Drawing.Size(296, 277);
+            this.dgv_ListarMarcas.Size = new System.Drawing.Size(401, 281);
             this.dgv_ListarMarcas.TabIndex = 0;
             // 
             // btn_Modificar
             // 
-            this.btn_Modificar.Location = new System.Drawing.Point(37, 378);
+            this.btn_Modificar.Location = new System.Drawing.Point(27, 366);
+            this.btn_Modificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Modificar.Name = "btn_Modificar";
-            this.btn_Modificar.Size = new System.Drawing.Size(92, 31);
+            this.btn_Modificar.Size = new System.Drawing.Size(69, 25);
             this.btn_Modificar.TabIndex = 1;
             this.btn_Modificar.Text = "Modificar";
             this.btn_Modificar.UseVisualStyleBackColor = true;
@@ -55,14 +57,15 @@
             // 
             // Frm_ListarMarcas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(300, 360);
+            this.ClientSize = new System.Drawing.Size(473, 432);
             this.Controls.Add(this.btn_Modificar);
             this.Controls.Add(this.dgv_ListarMarcas);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Frm_ListarMarcas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Frm_ListarMarcas";
+            this.Text = "Listado de Marcas";
             this.Load += new System.EventHandler(this.Frm_ListarMarcas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ListarMarcas)).EndInit();
             this.ResumeLayout(false);
