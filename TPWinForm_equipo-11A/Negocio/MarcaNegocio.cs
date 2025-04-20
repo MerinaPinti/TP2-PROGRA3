@@ -90,7 +90,22 @@ namespace Negocio
             }
         }
 
-        public void eliminarMarca(int ID_marca)
+        public void eliminarLogico(int ID_marca)
+        {
+            try
+            {
+                AccesoDatos datos = new AccesoDatos();
+                datos.setearConsulta("update from MARCAS set ACTIVO = 0 where Id = @ID_marca");
+                datos.setearParametros("ID_marca", ID_marca);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+        public void eliminarFisico(int ID_marca)
         {
             try
             {

@@ -46,6 +46,11 @@ namespace TPWinForm_equipo_11A
 
         private void btn_Eliminar_Click(object sender, EventArgs e)
         {
+            eliminarMarca();
+        }
+
+        private void eliminarMarca(bool logico = false)
+        {
             MarcaNegocio negocio = new MarcaNegocio();
             Marcas seleccionado;
 
@@ -56,7 +61,14 @@ namespace TPWinForm_equipo_11A
                 if (respuesta == DialogResult.Yes)
                 {
                     seleccionado = (Marcas)dgv_ListarMarcas.CurrentRow.DataBoundItem;
-                    negocio.eliminarMarca(seleccionado.ID);
+                    if (logico)
+                    {
+                        negocio.eliminarLogico(seleccionado.ID);
+                    }
+                    else
+                    {
+                        negocio.eliminarFisico(seleccionado.ID);
+                    }
                     dgv_ListarMarcas.DataSource = negocio.listar();
 
                 }
@@ -67,6 +79,7 @@ namespace TPWinForm_equipo_11A
 
                 MessageBox.Show(ex.ToString());
             }
+
         }
     }
 }
