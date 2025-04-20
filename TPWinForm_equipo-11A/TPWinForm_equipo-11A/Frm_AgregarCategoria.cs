@@ -31,6 +31,7 @@ namespace TPWinForm_equipo_11A
 
         }
 
+       
         private void bt_Agregar_Click(object sender, EventArgs e)
         {
             CategoriaNegocio negocio = new CategoriaNegocio();
@@ -55,6 +56,7 @@ namespace TPWinForm_equipo_11A
                     MessageBox.Show("Categoria agregada.");
                 }
 
+                this.DialogResult = DialogResult.OK;
                 Close();
             }
             catch (Exception ex)
@@ -62,11 +64,28 @@ namespace TPWinForm_equipo_11A
                 MessageBox.Show(ex.ToString());
             }
         }
-     
+
 
         private void btn_Cancelar_Click(object sender, EventArgs e)
         {
             Close();
         }
+
+        
+            private void Frm_AgregarCategoria_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                if (categorias != null)
+                {
+                    tb_nombreCat.Text = categorias.Descripcion;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
-}
+    }
+
