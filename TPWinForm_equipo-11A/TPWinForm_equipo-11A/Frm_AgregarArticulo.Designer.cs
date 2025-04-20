@@ -146,6 +146,7 @@
             this.tb_Precio.Name = "tb_Precio";
             this.tb_Precio.Size = new System.Drawing.Size(285, 21);
             this.tb_Precio.TabIndex = 5;
+            this.tb_Precio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_Precio_KeyPress);
             // 
             // lb_Titulo
             // 
@@ -160,7 +161,7 @@
             // bt_Agregar
             // 
             this.bt_Agregar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_Agregar.Location = new System.Drawing.Point(315, 422);
+            this.bt_Agregar.Location = new System.Drawing.Point(228, 422);
             this.bt_Agregar.Name = "bt_Agregar";
             this.bt_Agregar.Size = new System.Drawing.Size(82, 29);
             this.bt_Agregar.TabIndex = 7;
@@ -185,8 +186,8 @@
             // btn_Cancelar
             // 
             this.btn_Cancelar.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cancelar.Location = new System.Drawing.Point(315, 456);
-            this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Cancelar.Location = new System.Drawing.Point(315, 423);
+            this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(81, 28);
             this.btn_Cancelar.TabIndex = 8;
@@ -199,7 +200,7 @@
             this.cBox_Categoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBox_Categoria.FormattingEnabled = true;
             this.cBox_Categoria.Location = new System.Drawing.Point(111, 268);
-            this.cBox_Categoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cBox_Categoria.Margin = new System.Windows.Forms.Padding(2);
             this.cBox_Categoria.Name = "cBox_Categoria";
             this.cBox_Categoria.Size = new System.Drawing.Size(286, 21);
             this.cBox_Categoria.TabIndex = 4;
@@ -258,7 +259,7 @@
             this.Controls.Add(this.lb_NombreArticulo);
             this.Controls.Add(this.lb_Cod_Articulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Frm_AgregarArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Artículo";

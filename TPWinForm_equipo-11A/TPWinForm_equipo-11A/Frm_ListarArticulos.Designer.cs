@@ -30,6 +30,8 @@
         {
             this.dgv_listadoArticulos = new System.Windows.Forms.DataGridView();
             this.pb_articulos = new System.Windows.Forms.PictureBox();
+            this.bt_modificar = new System.Windows.Forms.Button();
+            this.bt_agregar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_listadoArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_articulos)).BeginInit();
             this.SuspendLayout();
@@ -53,11 +55,33 @@
             this.pb_articulos.TabIndex = 1;
             this.pb_articulos.TabStop = false;
             // 
+            // bt_modificar
+            // 
+            this.bt_modificar.Location = new System.Drawing.Point(93, 458);
+            this.bt_modificar.Name = "bt_modificar";
+            this.bt_modificar.Size = new System.Drawing.Size(75, 23);
+            this.bt_modificar.TabIndex = 2;
+            this.bt_modificar.Text = "Modificar";
+            this.bt_modificar.UseVisualStyleBackColor = true;
+            this.bt_modificar.Click += new System.EventHandler(this.bt_modificar_Click);
+            // 
+            // bt_agregar
+            // 
+            this.bt_agregar.Location = new System.Drawing.Point(12, 458);
+            this.bt_agregar.Name = "bt_agregar";
+            this.bt_agregar.Size = new System.Drawing.Size(75, 23);
+            this.bt_agregar.TabIndex = 3;
+            this.bt_agregar.Text = "Agregar";
+            this.bt_agregar.UseVisualStyleBackColor = true;
+            this.bt_agregar.Click += new System.EventHandler(this.bt_agregar_Click);
+            // 
             // Frm_ListarArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1190, 568);
+            this.Controls.Add(this.bt_agregar);
+            this.Controls.Add(this.bt_modificar);
             this.Controls.Add(this.pb_articulos);
             this.Controls.Add(this.dgv_listadoArticulos);
             this.Name = "Frm_ListarArticulos";
@@ -74,5 +98,7 @@
 
         private System.Windows.Forms.DataGridView dgv_listadoArticulos;
         private System.Windows.Forms.PictureBox pb_articulos;
+        private System.Windows.Forms.Button bt_modificar;
+        private System.Windows.Forms.Button bt_agregar;
     }
 }

@@ -75,7 +75,7 @@ namespace Negocio
                 while (datos.Lector.Read())
                 {
                     Categorias aux = new Categorias();
-                    aux.ID = datos.Lector.GetInt32(0); //Cuando hacemos un get debemos elegir el tipo de dato adecuado, y entre paréntesis va la posición de los campos en el orden del select ejemplo el 0 es "ID" 
+                    aux.ID = (int)datos.Lector["id"]; //Cuando hacemos un get debemos elegir el tipo de dato adecuado, y entre paréntesis va la posición de los campos en el orden del select ejemplo el 0 es "ID" 
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
 
                     lista.Add(aux);

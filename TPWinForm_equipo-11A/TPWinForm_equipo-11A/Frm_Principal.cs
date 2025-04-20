@@ -91,11 +91,11 @@ namespace TPWinForm_equipo_11A
         {
             foreach (var item in Application.OpenForms)
             {
-                if (item.GetType() == typeof(Frm_ModificarArticulo))
+                if (item.GetType() == typeof(Frm_ListarArticulos))
                     return;
             }
 
-            Frm_ModificarArticulo ventana = new Frm_ModificarArticulo();
+            Frm_ListarArticulos ventana = new Frm_ListarArticulos();
             ventana.MdiParent = this;
             ventana.Show();
         }

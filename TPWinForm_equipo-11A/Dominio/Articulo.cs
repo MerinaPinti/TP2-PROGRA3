@@ -13,8 +13,6 @@ namespace Dominio
         public string Codigo { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
-        public int ID_Marca { get; set; }
-        public int ID_Categoria { get; set; }
         public float Precio { get; set; }
 
 

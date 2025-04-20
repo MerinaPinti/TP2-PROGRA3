@@ -106,35 +106,29 @@ namespace Negocio
             try
             {
 
-                datos.setearConsulta("select A.Id,A.nombre, A.codigo, A.descripcion, A.IdCategoria, A.IdMarca, M.Descripcion as Marca, C.Descripcion as Categoria, A.Precio, I.ImagenUrl FROM ARTICULOS A INNER JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id LEFT JOIN IMAGENES I ON A.Id = I.IdArticulo");
+                datos.setearConsulta("select A.Id,A.nombre, A.codigo, A.descripcion, A.IdCategoria as IdCategoria, A.IdMarca as IdMarca, M.Descripcion as Marca, C.Descripcion as Categoria, A.Precio, I.ImagenUrl FROM ARTICULOS A INNER JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id LEFT JOIN IMAGENES I ON A.Id = I.IdArticulo");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
                 {
                     Articulo aux = new Articulo();
-                    aux.ID = datos.Lector.GetInt32(0);
+                    aux.ID = (int)datos.Lector["Id"];
                     aux.Codigo = (string)datos.Lector["Codigo"];
                     aux.Nombre = (string)datos.Lector["Nombre"];
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
+
                     aux.Marca = new Marcas();
-
-                    aux.ID_Marca = Convert.ToInt32(datos.Lector["IDMarca"]);
-
-
-                    //aux.Marca.ID = Convert.ToInt32(datos.Lector["IDMarca"]);
-                    aux.Marca.Descripcion = datos.Lector["Marca"].ToString();
+                    aux.Marca.ID = (int)datos.Lector["IdMarca"];
+                    aux.Marca.Descripcion = (string)datos.Lector["Marca"];
                     aux.Categoria = new Categorias();
-                    aux.ID_Categoria = Convert.ToInt32(datos.Lector["IDCategoria"]);
-                    //aux.Categoria.ID = Convert.ToInt32(datos.Lector["IDCategoria"]);
-                    aux.Categoria.Descripcion = datos.Lector["Categoria"].ToString();
+                    aux.Categoria.ID = (int)datos.Lector["IdCategoria"];
+                    //aux.ID_Categoria = Convert.ToInt32(datos.Lector["IDCategoria"]);
+
+                    aux.Categoria.Descripcion = (string)datos.Lector["Categoria"];
                     aux.Precio = datos.Lector["Precio"] != DBNull.Value ? Convert.ToSingle(datos.Lector["Precio"]) : 0;
                     aux.Imagen = new Imagenes();
                     aux.Imagen.ImagenUrl = datos.Lector["ImagenUrl"] != DBNull.Value ? datos.Lector["ImagenUrl"].ToString() : "";
-                    
-
-                        lista.Add(aux);
-
-
+                    lista.Add(aux);
                 }
 
                 return lista;
@@ -197,16 +191,15 @@ namespace Negocio
             try
             {
                 // Insertar artículo y obtener el ID recién creado
-                datos.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, Precio, IDMarca, IDCategoria) " +
-                                     "VALUES (@Codigo, @Nombre, @Descripcion, @Precio, @IDMarca, @IDCategoria); " +
-                                     "SELECT SCOPE_IDENTITY();");
+                datos.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, Precio, IdMarca, IdCategoria) VALUES (@Codigo, @Nombre, @Descripcion, @Precio, @IDMarca, @IDCategoria)");
+                                    // +"SELECT SCOPE_IDENTITY();";
 
                 datos.setearParametros("@Codigo", nuevo.Codigo);
                 datos.setearParametros("@Nombre", nuevo.Nombre);
                 datos.setearParametros("@Descripcion", nuevo.Descripcion);
                 datos.setearParametros("@Precio", nuevo.Precio);
-                datos.setearParametros("@IDMarca", nuevo.Marca.ID);
-                datos.setearParametros("@IDCategoria", nuevo.Categoria.ID);
+                datos.setearParametros("@IdMarca", nuevo.Marca.ID);
+                datos.setearParametros("@IdCategoria", nuevo.Categoria.ID);
 
                 // Obtener el ID generado del artículo
                 nuevo.ID = datos.ejecutarScalar();
@@ -252,6 +245,31 @@ namespace Negocio
             }
         }
 
+        public void modificar(Articulo articulo)
+        {  
+            AccesoDatos accesoDatos = new AccesoDatos();
+            try
+            {
+                accesoDatos.setearConsulta("update ARTICULOS set Codigo = @Codigo, Nombre = @Nombre, Descripcion = @Descripcion, IdMarca = @IdMarca, IdCategoria = @IdCategoria, Precio = @Precio where Id = @Id");
+                accesoDatos.setearParametros("@Codigo", articulo.Codigo);
+                accesoDatos.setearParametros("@Nombre", articulo.Nombre);
+                accesoDatos.setearParametros("@Descripcion", articulo.Descripcion);
+                accesoDatos.setearParametros("@IdMarca", articulo.Marca.ID);
+                accesoDatos.setearParametros("@IdCategoria", articulo.Categoria.ID);
+                accesoDatos.setearParametros("@Precio", articulo.Precio);
+                accesoDatos.setearParametros("@Id", articulo.ID);
+                accesoDatos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
+        }
 
 
     }
