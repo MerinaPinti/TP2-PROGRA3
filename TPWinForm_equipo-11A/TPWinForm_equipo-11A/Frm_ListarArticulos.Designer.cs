@@ -39,8 +39,11 @@
             // dgv_listadoArticulos
             // 
             this.dgv_listadoArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_listadoArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_listadoArticulos.Location = new System.Drawing.Point(12, 96);
+            this.dgv_listadoArticulos.MultiSelect = false;
             this.dgv_listadoArticulos.Name = "dgv_listadoArticulos";
+            this.dgv_listadoArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_listadoArticulos.Size = new System.Drawing.Size(796, 356);
             this.dgv_listadoArticulos.TabIndex = 0;
             this.dgv_listadoArticulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_listadoArticulos_CellContentClick);
