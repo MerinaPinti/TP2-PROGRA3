@@ -37,23 +37,20 @@
             // dgv_ListarMarcas
             // 
             this.dgv_ListarMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_ListarMarcas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgv_ListarMarcas.Location = new System.Drawing.Point(27, 50);
-            this.dgv_ListarMarcas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dgv_ListarMarcas.MultiSelect = false;
+            this.dgv_ListarMarcas.Location = new System.Drawing.Point(36, 62);
+            this.dgv_ListarMarcas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_ListarMarcas.Name = "dgv_ListarMarcas";
             this.dgv_ListarMarcas.RowHeadersWidth = 51;
             this.dgv_ListarMarcas.RowTemplate.Height = 24;
-            this.dgv_ListarMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_ListarMarcas.Size = new System.Drawing.Size(401, 281);
+            this.dgv_ListarMarcas.Size = new System.Drawing.Size(535, 346);
             this.dgv_ListarMarcas.TabIndex = 0;
             // 
             // btn_Modificar
             // 
-            this.btn_Modificar.Location = new System.Drawing.Point(27, 366);
-            this.btn_Modificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Modificar.Location = new System.Drawing.Point(36, 450);
+            this.btn_Modificar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Modificar.Name = "btn_Modificar";
-            this.btn_Modificar.Size = new System.Drawing.Size(69, 25);
+            this.btn_Modificar.Size = new System.Drawing.Size(92, 31);
             this.btn_Modificar.TabIndex = 1;
             this.btn_Modificar.Text = "Modificar";
             this.btn_Modificar.UseVisualStyleBackColor = true;
@@ -61,10 +58,9 @@
             // 
             // btn_Eliminar
             // 
-            this.btn_Eliminar.Location = new System.Drawing.Point(113, 366);
-            this.btn_Eliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Eliminar.Location = new System.Drawing.Point(151, 451);
             this.btn_Eliminar.Name = "btn_Eliminar";
-            this.btn_Eliminar.Size = new System.Drawing.Size(68, 24);
+            this.btn_Eliminar.Size = new System.Drawing.Size(90, 30);
             this.btn_Eliminar.TabIndex = 2;
             this.btn_Eliminar.Text = "Eliminar";
             this.btn_Eliminar.UseVisualStyleBackColor = true;
@@ -72,13 +68,13 @@
             // 
             // Frm_ListarMarcas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(473, 432);
+            this.ClientSize = new System.Drawing.Size(631, 532);
             this.Controls.Add(this.btn_Eliminar);
             this.Controls.Add(this.btn_Modificar);
             this.Controls.Add(this.dgv_ListarMarcas);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Frm_ListarMarcas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado de Marcas";
