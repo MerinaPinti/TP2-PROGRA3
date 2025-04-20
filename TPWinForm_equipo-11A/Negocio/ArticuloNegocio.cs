@@ -230,6 +230,28 @@ namespace Negocio
             }
         }
 
+        public bool existeCodigo(string codigo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("SELECT COUNT(*) FROM ARTICULOS WHERE Codigo = @Codigo");
+                datos.setearParametros("@Codigo", codigo);
+
+                int cantidad = datos.ejecutarScalar();
+                return cantidad > 0;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
 
 
     }

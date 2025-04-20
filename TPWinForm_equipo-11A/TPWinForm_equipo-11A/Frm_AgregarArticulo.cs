@@ -32,6 +32,13 @@ namespace TPWinForm_equipo_11A
             try
             {
                 nuevo.Codigo = tb_codArt.Text;
+                if (negocio.existeCodigo(nuevo.Codigo))
+                {
+                    MessageBox.Show("Ya existe un artículo con ese código. Ingresá uno diferente.");
+                    tb_codArt.Focus();
+                    return;
+                }
+
                 nuevo.Nombre = tb_nombreArt.Text;
                 nuevo.Descripcion = tb_Descrip.Text;
 
