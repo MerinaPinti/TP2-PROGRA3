@@ -271,36 +271,7 @@ namespace Negocio
             }
         }
 
-        public void eliminarLogico(int ID_articulo)
-        {
-            try
-            {
-                AccesoDatos datos = new AccesoDatos();
-                datos.setearConsulta("update from ARTICULOS set ACTIVO = 0 where Id = @ID_articulo");
-                datos.setearParametros("ID_articulo", ID_articulo);
-                datos.ejecutarAccion();
-            }
-            catch (Exception ex)
-            {
 
-                throw ex;
-            }
-        }
-        public void eliminarFisico(int ID_articulo)
-        {
-            try
-            {
-                AccesoDatos datos = new AccesoDatos();
-                datos.setearConsulta("delete from ARTICULOS where Id = @ID_articulo");
-                datos.setearParametros("ID_articulo", ID_articulo);
-                datos.ejecutarAccion();
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
-        }
     }
 
 }

@@ -112,43 +112,5 @@ namespace TPWinForm_equipo_11A
             Frm_AgregarArticulo ventana = new Frm_AgregarArticulo();
             ventana.Show();
         }
-
-        private void btn_Eliminar_Click(object sender, EventArgs e)
-        {
-            eliminarArticulo();
-        }
-
-        private void eliminarArticulo(bool logico = false)
-        {
-            ArticuloNegocio negocio = new ArticuloNegocio();
-            Articulo seleccionado;
-
-            try
-            {
-                DialogResult respuesta = MessageBox.Show("¿Esta seguro de eliminar este articulo?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-                if (respuesta == DialogResult.Yes)
-                {
-                    seleccionado = (Articulo)dgv_listadoArticulos.CurrentRow.DataBoundItem;
-                    if (logico)
-                    {
-                        negocio.eliminarLogico(seleccionado.ID);
-                    }
-                    else
-                    {
-                        negocio.eliminarFisico(seleccionado.ID);
-                    }
-                    dgv_listadoArticulos.DataSource = negocio.listar();
-
-                }
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.ToString());
-            }
-
-        }
     }
 }

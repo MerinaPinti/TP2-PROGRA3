@@ -165,16 +165,5 @@ namespace TPWinForm_equipo_11A
             ventana.MdiParent = this;
             ventana.Show();
         }
-
-        private void tstrip_Eliminar_Archivos_Click(object sender, EventArgs e)
-        {
-            foreach (var item in Application.OpenForms)
-            {
-                if (item.GetType() == typeof(Frm_ListarArticulos)) return;
-            }
-            Frm_ListarArticulos ventana = new Frm_ListarArticulos();
-            ventana.MdiParent = this;
-            ventana.Show();
-        }
     }
 }
