@@ -44,6 +44,15 @@ namespace TPWinForm_equipo_11A
                 }
 
                 categorias.Descripcion = tb_nombreCat.Text;
+                //Validación caracteres
+                if (tb_nombreCat.Text.Length > 50)
+                {
+                    MessageBox.Show("La descripción no puede tener más de 50 caracteres.");
+                    tb_nombreCat.Focus();
+                    return;
+                }
+
+                categorias.Descripcion = tb_nombreCat.Text;
 
                 if (categorias.ID != 0)
                 {

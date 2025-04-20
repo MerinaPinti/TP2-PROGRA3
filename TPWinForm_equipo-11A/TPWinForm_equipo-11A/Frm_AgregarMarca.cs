@@ -43,6 +43,15 @@ namespace TPWinForm_equipo_11A
                 }
 
                 marcas.Descripcion = tb_nombreArt.Text;
+                //Validación caracteres 
+                if (tb_nombreArt.Text.Length > 50)
+                {
+                    MessageBox.Show("La descripción no puede tener más de 50 caracteres.");
+                    tb_nombreArt.Focus();
+                    return;
+                }
+
+                marcas.Descripcion = tb_nombreArt.Text;
 
                 if (marcas.ID != 0)
                 {
