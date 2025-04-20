@@ -1,4 +1,5 @@
-﻿using Negocio;
+﻿using Dominio;
+using Negocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +23,25 @@ namespace TPWinForm_equipo_11A
         {
             MarcaNegocio negocio = new MarcaNegocio();
             dgv_ListarMarcas.DataSource = negocio.listar();
+        }
+
+        private void btn_Modificar_Click(object sender, EventArgs e)
+        {
+            if (dgv_ListarMarcas.CurrentRow == null)
+            {
+                MessageBox.Show("Seleccioná una marca para modificar.");
+                return;
+            }
+
+            Marcas seleccionado = (Marcas)dgv_ListarMarcas.CurrentRow.DataBoundItem;
+            Frm_AgregarMarca modificar = new Frm_AgregarMarca(seleccionado);
+
+            if (modificar.ShowDialog() == DialogResult.OK)
+            {
+                MarcaNegocio negocio = new MarcaNegocio();
+                dgv_ListarMarcas.DataSource = negocio.listar();
+            }
+
         }
     }
 }

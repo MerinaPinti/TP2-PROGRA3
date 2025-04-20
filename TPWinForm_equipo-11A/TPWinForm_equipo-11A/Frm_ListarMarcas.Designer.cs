@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.dgv_ListarMarcas = new System.Windows.Forms.DataGridView();
+            this.btn_Modificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ListarMarcas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,11 +43,22 @@
             this.dgv_ListarMarcas.Size = new System.Drawing.Size(296, 277);
             this.dgv_ListarMarcas.TabIndex = 0;
             // 
+            // btn_Modificar
+            // 
+            this.btn_Modificar.Location = new System.Drawing.Point(37, 378);
+            this.btn_Modificar.Name = "btn_Modificar";
+            this.btn_Modificar.Size = new System.Drawing.Size(92, 31);
+            this.btn_Modificar.TabIndex = 1;
+            this.btn_Modificar.Text = "Modificar";
+            this.btn_Modificar.UseVisualStyleBackColor = true;
+            this.btn_Modificar.Click += new System.EventHandler(this.btn_Modificar_Click);
+            // 
             // Frm_ListarMarcas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(376, 450);
+            this.ClientSize = new System.Drawing.Size(300, 360);
+            this.Controls.Add(this.btn_Modificar);
             this.Controls.Add(this.dgv_ListarMarcas);
             this.Name = "Frm_ListarMarcas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -60,5 +72,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgv_ListarMarcas;
+        private System.Windows.Forms.Button btn_Modificar;
     }
 }

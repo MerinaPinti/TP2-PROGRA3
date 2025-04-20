@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,29 +15,51 @@ namespace TPWinForm_equipo_11A
 {
     public partial class Frm_AgregarMarca : Form
     {
+        private Marcas marcas = null;
         public Frm_AgregarMarca()
         {
             InitializeComponent();
         }
 
+        public Frm_AgregarMarca(Marcas marcas)
+        {
+            InitializeComponent();
+            //this es el null y categorías es el que viene por parámetro. 
+            //cuando ponemos modificar va a estar cargdo con el pokemon que vino de la otra ventana. 
+            this.marcas = marcas;
+            Text = "Modificar Marcas";
+
+        }
+
         private void bt_Agregar_Click(object sender, EventArgs e)
         {
-            Marcas nuevo = new Marcas();
             MarcaNegocio negocio = new MarcaNegocio();
 
             try
             {
-                nuevo.Descripcion = tb_nombreArt.Text;
+                if (marcas == null)
+                {
+                    marcas = new Marcas();
+                }
 
-                negocio.agregarMarca(nuevo);
+                marcas.Descripcion = tb_nombreArt.Text;
 
-                MessageBox.Show("Marca agregada.");
+                if (marcas.ID != 0)
+                {
+                    negocio.modificarMarca(marcas);
+                    MessageBox.Show("Modificado Exitosamente.");
+                }
+                else
+                {
+                    negocio.agregarMarca(marcas);
+                    MessageBox.Show("Marca agregada.");
+                }
 
+                this.DialogResult = DialogResult.OK;
                 Close();
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.ToString());
             }
         }
@@ -44,6 +67,21 @@ namespace TPWinForm_equipo_11A
         private void btn_Cancelar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void Frm_AgregarMarca_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                if (marcas != null)
+                {
+                    tb_nombreArt.Text = marcas.Descripcion;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }
