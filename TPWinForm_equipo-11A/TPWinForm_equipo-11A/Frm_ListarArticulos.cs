@@ -170,7 +170,7 @@ namespace TPWinForm_equipo_11A
             List<Articulo> listaFiltrada = new List<Articulo>();
             string filtro = tb_filtro.Text;
 
-            if (filtro.Length >= 2)
+            if (filtro == "")
             {
                 listaFiltrada = lista.FindAll(
                     x => x.Nombre.ToLower().Contains(filtro.ToLower()) || x.ID.ToString().ToLower().Contains(filtro.ToLower()));

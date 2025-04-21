@@ -24,6 +24,7 @@ namespace TPWinForm_equipo_11A
         {
             InitializeComponent();
             this.Text = "Modificar Artículo";
+            lb_Titulo.Text = "Modificar Artículo";
             this.articulo = articulo;
 
         }

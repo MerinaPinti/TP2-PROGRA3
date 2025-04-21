@@ -35,6 +35,7 @@
             this.btn_Eliminar = new System.Windows.Forms.Button();
             this.tb_filtro = new System.Windows.Forms.TextBox();
             this.lbl_Filtro = new System.Windows.Forms.Label();
+            this.lb_Titulo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_listadoArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_articulos)).BeginInit();
             this.SuspendLayout();
@@ -43,7 +44,7 @@
             // 
             this.dgv_listadoArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_listadoArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgv_listadoArticulos.Location = new System.Drawing.Point(12, 96);
+            this.dgv_listadoArticulos.Location = new System.Drawing.Point(15, 106);
             this.dgv_listadoArticulos.MultiSelect = false;
             this.dgv_listadoArticulos.Name = "dgv_listadoArticulos";
             this.dgv_listadoArticulos.RowHeadersWidth = 51;
@@ -55,7 +56,7 @@
             // 
             // pb_articulos
             // 
-            this.pb_articulos.Location = new System.Drawing.Point(814, 96);
+            this.pb_articulos.Location = new System.Drawing.Point(817, 106);
             this.pb_articulos.Name = "pb_articulos";
             this.pb_articulos.Size = new System.Drawing.Size(350, 356);
             this.pb_articulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -64,7 +65,7 @@
             // 
             // bt_modificar
             // 
-            this.bt_modificar.Location = new System.Drawing.Point(93, 458);
+            this.bt_modificar.Location = new System.Drawing.Point(96, 468);
             this.bt_modificar.Name = "bt_modificar";
             this.bt_modificar.Size = new System.Drawing.Size(75, 23);
             this.bt_modificar.TabIndex = 2;
@@ -74,7 +75,7 @@
             // 
             // bt_agregar
             // 
-            this.bt_agregar.Location = new System.Drawing.Point(12, 458);
+            this.bt_agregar.Location = new System.Drawing.Point(15, 468);
             this.bt_agregar.Name = "bt_agregar";
             this.bt_agregar.Size = new System.Drawing.Size(75, 23);
             this.bt_agregar.TabIndex = 3;
@@ -84,7 +85,7 @@
             // 
             // btn_Eliminar
             // 
-            this.btn_Eliminar.Location = new System.Drawing.Point(174, 458);
+            this.btn_Eliminar.Location = new System.Drawing.Point(177, 468);
             this.btn_Eliminar.Name = "btn_Eliminar";
             this.btn_Eliminar.Size = new System.Drawing.Size(75, 23);
             this.btn_Eliminar.TabIndex = 4;
@@ -95,7 +96,7 @@
             // tb_filtro
             // 
             this.tb_filtro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_filtro.Location = new System.Drawing.Point(50, 62);
+            this.tb_filtro.Location = new System.Drawing.Point(53, 72);
             this.tb_filtro.Name = "tb_filtro";
             this.tb_filtro.Size = new System.Drawing.Size(176, 20);
             this.tb_filtro.TabIndex = 5;
@@ -104,17 +105,28 @@
             // lbl_Filtro
             // 
             this.lbl_Filtro.AutoSize = true;
-            this.lbl_Filtro.Location = new System.Drawing.Point(12, 65);
+            this.lbl_Filtro.Location = new System.Drawing.Point(15, 75);
             this.lbl_Filtro.Name = "lbl_Filtro";
             this.lbl_Filtro.Size = new System.Drawing.Size(32, 13);
             this.lbl_Filtro.TabIndex = 6;
             this.lbl_Filtro.Text = "Filtro:";
             // 
+            // lb_Titulo
+            // 
+            this.lb_Titulo.AutoSize = true;
+            this.lb_Titulo.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Titulo.Location = new System.Drawing.Point(10, 18);
+            this.lb_Titulo.Name = "lb_Titulo";
+            this.lb_Titulo.Size = new System.Drawing.Size(187, 30);
+            this.lb_Titulo.TabIndex = 27;
+            this.lb_Titulo.Text = "Listado Artículos";
+            // 
             // Frm_ListarArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1190, 568);
+            this.ClientSize = new System.Drawing.Size(1190, 517);
+            this.Controls.Add(this.lb_Titulo);
             this.Controls.Add(this.lbl_Filtro);
             this.Controls.Add(this.tb_filtro);
             this.Controls.Add(this.btn_Eliminar);
@@ -143,5 +155,6 @@
         private System.Windows.Forms.Button btn_Eliminar;
         private System.Windows.Forms.TextBox tb_filtro;
         private System.Windows.Forms.Label lbl_Filtro;
+        private System.Windows.Forms.Label lb_Titulo;
     }
 }

@@ -28,6 +28,7 @@ namespace TPWinForm_equipo_11A
             //cuando ponemos modificar va a estar cargdo con el pokemon que vino de la otra ventana. 
             this.marcas = marcas;
             Text = "Modificar Marcas";
+            lb_Titulo.Text = "Modificar Marcas";
 
         }
 
