@@ -178,5 +178,6 @@ namespace TPWinForm_equipo_11A
             ventana.MdiParent = this;
             ventana.Show();
         }
+       
     }
 }

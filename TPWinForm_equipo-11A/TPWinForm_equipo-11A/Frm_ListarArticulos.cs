@@ -31,9 +31,7 @@ namespace TPWinForm_equipo_11A
 
         private void Frm_ListarArticulos_Load(object sender, EventArgs e)
         {
-            ArticuloNegocio negocio = new ArticuloNegocio();
-            lista = negocio.listar();
-            dgv_listadoArticulos.DataSource = lista;
+            cargar();
             //Ocultamos la url de la imagen en el registro 
             //dgv_listadoArticulos.Columns["ImagenUrl"].Visible = false;
             //cargarImagen(lista[0].Imagen.ToString());
@@ -46,8 +44,11 @@ namespace TPWinForm_equipo_11A
             //Cuando devuelve siempre devuelve un objeto, pero sabemos que ese object es un tipo pokemon (porque le dimos una lista de pokemons) entonces lo casteamos para guardarlo en un avariable pokemon 
             //dgv_pokemons.CurrentRow.DataBoundItem;
 
-            Articulo seleccionado = (Articulo)dgv_listadoArticulos.CurrentRow.DataBoundItem;
-            cargarImagen(seleccionado.Imagen.ToString());
+            if(dgv_listadoArticulos.CurrentRow != null)
+            {
+                Articulo seleccionado = (Articulo)dgv_listadoArticulos.CurrentRow.DataBoundItem;
+                cargarImagen(seleccionado.Imagen.ToString());
+            }
         }
 
 
@@ -149,6 +150,33 @@ namespace TPWinForm_equipo_11A
                 MessageBox.Show(ex.ToString());
             }
 
+        }
+
+        private void cargar()
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            lista = negocio.listar();
+            dgv_listadoArticulos.DataSource = lista;
+        }
+
+        private void btn_Buscar_Click(object sender, EventArgs e)
+        {
+            List<Articulo> listaFiltrada = new List<Articulo>();
+            string filtro = tb_filtro.Text;
+
+            if (filtro != "")
+            {
+                listaFiltrada = lista.FindAll(
+                    x => x.Nombre.ToLower().Contains(filtro.ToLower()) || x.ID.ToString().ToLower().Contains(filtro.ToLower()));
+                dgv_listadoArticulos.DataSource = null;
+                dgv_listadoArticulos.DataSource = listaFiltrada;
+            }
+            else
+            {
+                listaFiltrada = lista;
+                dgv_listadoArticulos.DataSource = null;
+                dgv_listadoArticulos.DataSource = lista;
+            }
         }
     }
 }

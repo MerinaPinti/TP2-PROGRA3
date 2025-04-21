@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_ListarArticulos));
             this.dgv_listadoArticulos = new System.Windows.Forms.DataGridView();
             this.pb_articulos = new System.Windows.Forms.PictureBox();
             this.bt_modificar = new System.Windows.Forms.Button();
             this.bt_agregar = new System.Windows.Forms.Button();
             this.btn_Eliminar = new System.Windows.Forms.Button();
+            this.btn_Buscar = new System.Windows.Forms.Button();
+            this.tb_filtro = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_listadoArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_articulos)).BeginInit();
             this.SuspendLayout();
@@ -90,11 +93,32 @@
             this.btn_Eliminar.UseVisualStyleBackColor = true;
             this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
             // 
+            // btn_Buscar
+            // 
+            this.btn_Buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Buscar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Buscar.Image")));
+            this.btn_Buscar.Location = new System.Drawing.Point(1131, 54);
+            this.btn_Buscar.Name = "btn_Buscar";
+            this.btn_Buscar.Size = new System.Drawing.Size(33, 24);
+            this.btn_Buscar.TabIndex = 6;
+            this.btn_Buscar.UseVisualStyleBackColor = true;
+            this.btn_Buscar.Click += new System.EventHandler(this.btn_Buscar_Click);
+            // 
+            // tb_filtro
+            // 
+            this.tb_filtro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_filtro.Location = new System.Drawing.Point(944, 57);
+            this.tb_filtro.Name = "tb_filtro";
+            this.tb_filtro.Size = new System.Drawing.Size(176, 20);
+            this.tb_filtro.TabIndex = 5;
+            // 
             // Frm_ListarArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1190, 568);
+            this.Controls.Add(this.btn_Buscar);
+            this.Controls.Add(this.tb_filtro);
             this.Controls.Add(this.btn_Eliminar);
             this.Controls.Add(this.bt_agregar);
             this.Controls.Add(this.bt_modificar);
@@ -107,6 +131,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_listadoArticulos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_articulos)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -117,5 +142,7 @@
         private System.Windows.Forms.Button bt_modificar;
         private System.Windows.Forms.Button bt_agregar;
         private System.Windows.Forms.Button btn_Eliminar;
+        private System.Windows.Forms.Button btn_Buscar;
+        private System.Windows.Forms.TextBox tb_filtro;
     }
 }
