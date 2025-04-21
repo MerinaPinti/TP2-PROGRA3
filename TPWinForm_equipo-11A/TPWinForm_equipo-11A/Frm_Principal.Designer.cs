@@ -138,21 +138,21 @@
             // tstrip_Agregar_Categorias
             // 
             this.tstrip_Agregar_Categorias.Name = "tstrip_Agregar_Categorias";
-            this.tstrip_Agregar_Categorias.Size = new System.Drawing.Size(125, 22);
+            this.tstrip_Agregar_Categorias.Size = new System.Drawing.Size(180, 22);
             this.tstrip_Agregar_Categorias.Text = "Agregar";
             this.tstrip_Agregar_Categorias.Click += new System.EventHandler(this.tstrip_Agregar_Categorias_Click);
             // 
             // tstrip_Modificar_Categorias
             // 
             this.tstrip_Modificar_Categorias.Name = "tstrip_Modificar_Categorias";
-            this.tstrip_Modificar_Categorias.Size = new System.Drawing.Size(125, 22);
+            this.tstrip_Modificar_Categorias.Size = new System.Drawing.Size(180, 22);
             this.tstrip_Modificar_Categorias.Text = "Modificar";
             this.tstrip_Modificar_Categorias.Click += new System.EventHandler(this.tstrip_Modificar_Categorias_Click);
             // 
             // tstrip_Eliminar_Categorias
             // 
             this.tstrip_Eliminar_Categorias.Name = "tstrip_Eliminar_Categorias";
-            this.tstrip_Eliminar_Categorias.Size = new System.Drawing.Size(125, 22);
+            this.tstrip_Eliminar_Categorias.Size = new System.Drawing.Size(180, 22);
             this.tstrip_Eliminar_Categorias.Text = "Eliminar";
             this.tstrip_Eliminar_Categorias.Click += new System.EventHandler(this.tstrip_Eliminar_Categorias_Click);
             // 

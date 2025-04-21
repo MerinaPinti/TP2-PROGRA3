@@ -133,16 +133,6 @@ namespace TPWinForm_equipo_11A
             ventana.Show();
         }
 
-        private void tstrip_Modificar_Categorias_Click(object sender, EventArgs e)
-        {
-            foreach (var item in Application.OpenForms)
-            {
-                if (item.GetType() == typeof(Frm_ModificarCategoria)) return;
-            }
-            Frm_ModificarCategoria ventana = new Frm_ModificarCategoria();
-            ventana.MdiParent = this;
-            ventana.Show();
-        }
 
         private void tstrip_Eliminar_Marcas_Click(object sender, EventArgs e)
         {
@@ -178,6 +168,18 @@ namespace TPWinForm_equipo_11A
             ventana.MdiParent = this;
             ventana.Show();
         }
-       
+
+        private void tstrip_Modificar_Categorias_Click(object sender, EventArgs e)
+        {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(Frm_ListarCategorias))
+                    return;
+            }
+
+            Frm_ListarCategorias ventana = new Frm_ListarCategorias();
+            ventana.MdiParent = this;
+            ventana.Show();
+        }
     }
 }
