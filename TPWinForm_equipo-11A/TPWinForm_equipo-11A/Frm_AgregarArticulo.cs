@@ -37,7 +37,6 @@ namespace TPWinForm_equipo_11A
         {
          
             ArticuloNegocio negocio = new ArticuloNegocio();
-
             try
             {
                 if(articulo == null) 

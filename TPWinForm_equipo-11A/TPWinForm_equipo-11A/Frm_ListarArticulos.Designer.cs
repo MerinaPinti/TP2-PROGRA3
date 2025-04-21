@@ -28,14 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_ListarArticulos));
             this.dgv_listadoArticulos = new System.Windows.Forms.DataGridView();
             this.pb_articulos = new System.Windows.Forms.PictureBox();
             this.bt_modificar = new System.Windows.Forms.Button();
             this.bt_agregar = new System.Windows.Forms.Button();
             this.btn_Eliminar = new System.Windows.Forms.Button();
-            this.btn_Buscar = new System.Windows.Forms.Button();
             this.tb_filtro = new System.Windows.Forms.TextBox();
+            this.lbl_Filtro = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_listadoArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_articulos)).BeginInit();
             this.SuspendLayout();
@@ -93,37 +92,37 @@
             this.btn_Eliminar.UseVisualStyleBackColor = true;
             this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
             // 
-            // btn_Buscar
-            // 
-            this.btn_Buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Buscar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Buscar.Image")));
-            this.btn_Buscar.Location = new System.Drawing.Point(1131, 54);
-            this.btn_Buscar.Name = "btn_Buscar";
-            this.btn_Buscar.Size = new System.Drawing.Size(33, 24);
-            this.btn_Buscar.TabIndex = 6;
-            this.btn_Buscar.UseVisualStyleBackColor = true;
-            this.btn_Buscar.Click += new System.EventHandler(this.btn_Buscar_Click);
-            // 
             // tb_filtro
             // 
             this.tb_filtro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_filtro.Location = new System.Drawing.Point(944, 57);
+            this.tb_filtro.Location = new System.Drawing.Point(50, 62);
             this.tb_filtro.Name = "tb_filtro";
             this.tb_filtro.Size = new System.Drawing.Size(176, 20);
             this.tb_filtro.TabIndex = 5;
+            this.tb_filtro.TextChanged += new System.EventHandler(this.tb_filtro_TextChanged);
+            // 
+            // lbl_Filtro
+            // 
+            this.lbl_Filtro.AutoSize = true;
+            this.lbl_Filtro.Location = new System.Drawing.Point(12, 65);
+            this.lbl_Filtro.Name = "lbl_Filtro";
+            this.lbl_Filtro.Size = new System.Drawing.Size(32, 13);
+            this.lbl_Filtro.TabIndex = 6;
+            this.lbl_Filtro.Text = "Filtro:";
             // 
             // Frm_ListarArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1190, 568);
-            this.Controls.Add(this.btn_Buscar);
+            this.Controls.Add(this.lbl_Filtro);
             this.Controls.Add(this.tb_filtro);
             this.Controls.Add(this.btn_Eliminar);
             this.Controls.Add(this.bt_agregar);
             this.Controls.Add(this.bt_modificar);
             this.Controls.Add(this.pb_articulos);
             this.Controls.Add(this.dgv_listadoArticulos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Frm_ListarArticulos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado de Artículos";
@@ -142,7 +141,7 @@
         private System.Windows.Forms.Button bt_modificar;
         private System.Windows.Forms.Button bt_agregar;
         private System.Windows.Forms.Button btn_Eliminar;
-        private System.Windows.Forms.Button btn_Buscar;
         private System.Windows.Forms.TextBox tb_filtro;
+        private System.Windows.Forms.Label lbl_Filtro;
     }
 }

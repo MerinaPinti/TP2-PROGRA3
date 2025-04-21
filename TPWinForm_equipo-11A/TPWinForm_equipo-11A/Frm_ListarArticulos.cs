@@ -32,6 +32,7 @@ namespace TPWinForm_equipo_11A
         private void Frm_ListarArticulos_Load(object sender, EventArgs e)
         {
             cargar();
+            ocultarColumnas();
             //Ocultamos la url de la imagen en el registro 
             //dgv_listadoArticulos.Columns["ImagenUrl"].Visible = false;
             //cargarImagen(lista[0].Imagen.ToString());
@@ -159,12 +160,17 @@ namespace TPWinForm_equipo_11A
             dgv_listadoArticulos.DataSource = lista;
         }
 
-        private void btn_Buscar_Click(object sender, EventArgs e)
+        private void ocultarColumnas()
+        {
+            dgv_listadoArticulos.Columns["Imagen"].Visible = false;
+        }
+
+        private void tb_filtro_TextChanged(object sender, EventArgs e)
         {
             List<Articulo> listaFiltrada = new List<Articulo>();
             string filtro = tb_filtro.Text;
 
-            if (filtro != "")
+            if (filtro.Length >= 2)
             {
                 listaFiltrada = lista.FindAll(
                     x => x.Nombre.ToLower().Contains(filtro.ToLower()) || x.ID.ToString().ToLower().Contains(filtro.ToLower()));
@@ -176,6 +182,7 @@ namespace TPWinForm_equipo_11A
                 listaFiltrada = lista;
                 dgv_listadoArticulos.DataSource = null;
                 dgv_listadoArticulos.DataSource = lista;
+                ocultarColumnas();
             }
         }
     }
