@@ -86,6 +86,8 @@
             this.Controls.Add(this.btn_Eliminar);
             this.Controls.Add(this.btn_modificar);
             this.Controls.Add(this.dgv_ListarCategorias);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Frm_ListarCategorias";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado de Categorías";

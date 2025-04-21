@@ -79,7 +79,7 @@
             // 
             this.btn_Cancelar.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cancelar.Location = new System.Drawing.Point(310, 127);
-            this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(82, 29);
             this.btn_Cancelar.TabIndex = 31;
@@ -98,6 +98,8 @@
             this.Controls.Add(this.tb_nombreCat);
             this.Controls.Add(this.lb_NombreArticulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Frm_AgregarCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AgregarCategoria";

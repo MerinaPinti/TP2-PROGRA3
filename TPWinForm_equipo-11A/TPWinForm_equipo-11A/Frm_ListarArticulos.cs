@@ -153,7 +153,7 @@ namespace TPWinForm_equipo_11A
 
         }
 
-        private void cargar()
+        public void cargar()
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
             lista = negocio.listar();
@@ -170,7 +170,7 @@ namespace TPWinForm_equipo_11A
             List<Articulo> listaFiltrada = new List<Articulo>();
             string filtro = tb_filtro.Text;
 
-            if (filtro == "")
+            if (filtro != "")
             {
                 listaFiltrada = lista.FindAll(
                     x => x.Nombre.ToLower().Contains(filtro.ToLower()) || x.ID.ToString().ToLower().Contains(filtro.ToLower()));
@@ -184,6 +184,11 @@ namespace TPWinForm_equipo_11A
                 dgv_listadoArticulos.DataSource = lista;
                 ocultarColumnas();
             }
+        }
+
+        private void btn_actualizar_Click(object sender, EventArgs e)
+        {
+            cargar();
         }
     }
 }

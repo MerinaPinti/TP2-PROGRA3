@@ -91,6 +91,8 @@
             this.Controls.Add(this.btn_Modificar);
             this.Controls.Add(this.dgv_ListarMarcas);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Frm_ListarMarcas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado de Marcas";

@@ -36,6 +36,7 @@
             this.tb_filtro = new System.Windows.Forms.TextBox();
             this.lbl_Filtro = new System.Windows.Forms.Label();
             this.lb_Titulo = new System.Windows.Forms.Label();
+            this.btn_actualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_listadoArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_articulos)).BeginInit();
             this.SuspendLayout();
@@ -121,11 +122,22 @@
             this.lb_Titulo.TabIndex = 27;
             this.lb_Titulo.Text = "Listado Artículos";
             // 
+            // btn_actualizar
+            // 
+            this.btn_actualizar.Location = new System.Drawing.Point(736, 468);
+            this.btn_actualizar.Name = "btn_actualizar";
+            this.btn_actualizar.Size = new System.Drawing.Size(75, 23);
+            this.btn_actualizar.TabIndex = 28;
+            this.btn_actualizar.Text = "Actualizar";
+            this.btn_actualizar.UseVisualStyleBackColor = true;
+            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
+            // 
             // Frm_ListarArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1190, 517);
+            this.Controls.Add(this.btn_actualizar);
             this.Controls.Add(this.lb_Titulo);
             this.Controls.Add(this.lbl_Filtro);
             this.Controls.Add(this.tb_filtro);
@@ -135,6 +147,8 @@
             this.Controls.Add(this.pb_articulos);
             this.Controls.Add(this.dgv_listadoArticulos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Frm_ListarArticulos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado de Artículos";
@@ -156,5 +170,6 @@
         private System.Windows.Forms.TextBox tb_filtro;
         private System.Windows.Forms.Label lbl_Filtro;
         private System.Windows.Forms.Label lb_Titulo;
+        private System.Windows.Forms.Button btn_actualizar;
     }
 }

@@ -48,6 +48,11 @@
             this.lb_agregarimagen = new System.Windows.Forms.Label();
             this.tb_urlImagen = new System.Windows.Forms.TextBox();
             this.pb_AgregarImagenArt = new System.Windows.Forms.PictureBox();
+            this.lbl_Obligatorio = new System.Windows.Forms.Label();
+            this.lbl_Obligatorio2 = new System.Windows.Forms.Label();
+            this.lbl_Obligatorio3 = new System.Windows.Forms.Label();
+            this.lbl_Obligatorio4 = new System.Windows.Forms.Label();
+            this.lbl_Obligatorio5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pb_AgregarImagenArt)).BeginInit();
             this.SuspendLayout();
             // 
@@ -177,6 +182,7 @@
             // 
             // cBox_Marca
             // 
+            this.cBox_Marca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBox_Marca.FormattingEnabled = true;
             this.cBox_Marca.Location = new System.Drawing.Point(111, 225);
             this.cBox_Marca.Name = "cBox_Marca";
@@ -234,12 +240,77 @@
             this.pb_AgregarImagenArt.TabIndex = 17;
             this.pb_AgregarImagenArt.TabStop = false;
             // 
+            // lbl_Obligatorio
+            // 
+            this.lbl_Obligatorio.AutoSize = true;
+            this.lbl_Obligatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Obligatorio.ForeColor = System.Drawing.Color.DarkRed;
+            this.lbl_Obligatorio.Location = new System.Drawing.Point(397, 66);
+            this.lbl_Obligatorio.Name = "lbl_Obligatorio";
+            this.lbl_Obligatorio.Size = new System.Drawing.Size(15, 20);
+            this.lbl_Obligatorio.TabIndex = 18;
+            this.lbl_Obligatorio.Text = "*";
+            this.lbl_Obligatorio.Visible = false;
+            // 
+            // lbl_Obligatorio2
+            // 
+            this.lbl_Obligatorio2.AutoSize = true;
+            this.lbl_Obligatorio2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Obligatorio2.ForeColor = System.Drawing.Color.DarkRed;
+            this.lbl_Obligatorio2.Location = new System.Drawing.Point(397, 177);
+            this.lbl_Obligatorio2.Name = "lbl_Obligatorio2";
+            this.lbl_Obligatorio2.Size = new System.Drawing.Size(15, 20);
+            this.lbl_Obligatorio2.TabIndex = 19;
+            this.lbl_Obligatorio2.Text = "*";
+            this.lbl_Obligatorio2.Visible = false;
+            // 
+            // lbl_Obligatorio3
+            // 
+            this.lbl_Obligatorio3.AutoSize = true;
+            this.lbl_Obligatorio3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Obligatorio3.ForeColor = System.Drawing.Color.DarkRed;
+            this.lbl_Obligatorio3.Location = new System.Drawing.Point(397, 226);
+            this.lbl_Obligatorio3.Name = "lbl_Obligatorio3";
+            this.lbl_Obligatorio3.Size = new System.Drawing.Size(15, 20);
+            this.lbl_Obligatorio3.TabIndex = 20;
+            this.lbl_Obligatorio3.Text = "*";
+            this.lbl_Obligatorio3.Visible = false;
+            // 
+            // lbl_Obligatorio4
+            // 
+            this.lbl_Obligatorio4.AutoSize = true;
+            this.lbl_Obligatorio4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Obligatorio4.ForeColor = System.Drawing.Color.DarkRed;
+            this.lbl_Obligatorio4.Location = new System.Drawing.Point(397, 269);
+            this.lbl_Obligatorio4.Name = "lbl_Obligatorio4";
+            this.lbl_Obligatorio4.Size = new System.Drawing.Size(15, 20);
+            this.lbl_Obligatorio4.TabIndex = 21;
+            this.lbl_Obligatorio4.Text = "*";
+            this.lbl_Obligatorio4.Visible = false;
+            // 
+            // lbl_Obligatorio5
+            // 
+            this.lbl_Obligatorio5.AutoSize = true;
+            this.lbl_Obligatorio5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Obligatorio5.ForeColor = System.Drawing.Color.DarkRed;
+            this.lbl_Obligatorio5.Location = new System.Drawing.Point(397, 320);
+            this.lbl_Obligatorio5.Name = "lbl_Obligatorio5";
+            this.lbl_Obligatorio5.Size = new System.Drawing.Size(15, 20);
+            this.lbl_Obligatorio5.TabIndex = 22;
+            this.lbl_Obligatorio5.Text = "*";
+            this.lbl_Obligatorio5.Visible = false;
+            // 
             // Frm_AgregarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(813, 495);
+            this.Controls.Add(this.lbl_Obligatorio5);
+            this.Controls.Add(this.lbl_Obligatorio4);
+            this.Controls.Add(this.lbl_Obligatorio3);
+            this.Controls.Add(this.lbl_Obligatorio2);
+            this.Controls.Add(this.lbl_Obligatorio);
             this.Controls.Add(this.pb_AgregarImagenArt);
             this.Controls.Add(this.tb_urlImagen);
             this.Controls.Add(this.lb_agregarimagen);
@@ -260,6 +331,8 @@
             this.Controls.Add(this.lb_Cod_Articulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Frm_AgregarArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Artículo";
@@ -290,5 +363,10 @@
         private System.Windows.Forms.Label lb_agregarimagen;
         private System.Windows.Forms.TextBox tb_urlImagen;
         private System.Windows.Forms.PictureBox pb_AgregarImagenArt;
+        private System.Windows.Forms.Label lbl_Obligatorio;
+        private System.Windows.Forms.Label lbl_Obligatorio2;
+        private System.Windows.Forms.Label lbl_Obligatorio3;
+        private System.Windows.Forms.Label lbl_Obligatorio4;
+        private System.Windows.Forms.Label lbl_Obligatorio5;
     }
 }

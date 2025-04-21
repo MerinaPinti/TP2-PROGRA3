@@ -38,142 +38,72 @@ namespace TPWinForm_equipo_11A
         {
          
             ArticuloNegocio negocio = new ArticuloNegocio();
+            Frm_ListarArticulos listar = new Frm_ListarArticulos();
             try
             {
                 if(articulo == null) 
-                    articulo = new Articulo();          
-                    
+                    articulo = new Articulo();    
+                
+                if (!(validar(negocio, articulo)))
+                {
+                    return;
+                }  
                 articulo.Codigo = tb_codArt.Text;                    
                 articulo.Nombre = tb_nombreArt.Text;                   
-                articulo.Descripcion = tb_Descrip.Text;                   
-                articulo.Descripcion = tb_Descrip.Text;                    
+                articulo.Descripcion = tb_Descrip.Text;                                      
                 articulo.Marca = (Marcas)cBox_Marca.SelectedItem;                   
                 articulo.Categoria = (Categorias)cBox_Categoria.SelectedItem;                    
-                articulo.Precio = float.Parse(tb_Precio.Text);
-                //nuevo.Precio = precio;                  
+                articulo.Precio = float.Parse(tb_Precio.Text);                
                 articulo.Imagen = new Imagenes();                    
                 articulo.Imagen.ImagenUrl = tb_urlImagen.Text;
-                
-                if(articulo.ID != 0)
+
+                if (articulo.ID != 0)
                 {
-                    if (validar(negocio, articulo, true) == false)
-                    {
-                        tb_codArt.Focus();
-                        return;
-                    }
                     negocio.modificar(articulo);
-                    MessageBox.Show("Articulo agregado");
+                    MessageBox.Show("Artículo Modificado!", "Modificar Artículo");
                 }
                 else
                 {
-                    if (validar(negocio, articulo) == false)
+                    if (negocio.existeCodigo(articulo.Codigo))
                     {
-                        tb_codArt.Focus();
+                        MessageBox.Show("Ya existe un artículo con ese código. Ingresá uno diferente.");
                         return;
                     }
                     negocio.agregarArticulo(articulo);
-                    MessageBox.Show("Articulo agregado");
+                    MessageBox.Show("Artículo agregado!", "Agregar Artículo");
                 }
 
                 Close();
                 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Error desconocido, intente de nuevo más tarde");
+                //MessageBox.Show(ex.ToString());
             }
         }
 
-        private bool validar(ArticuloNegocio negocio, Articulo nuevo, bool esModificacion = false)
+        private bool validar(ArticuloNegocio negocio, Articulo nuevo)
         {
-            if (esModificacion)
-            {
+            
                 //Validación caracteres 
-                if (tb_Descrip.Text.Length > 150)
-                {
-                    MessageBox.Show("La descripción no puede tener más de 150 caracteres.");
-                    return false;
-                }
-
-                //Validación de no ingresar un número negativo 
-                if (string.IsNullOrWhiteSpace(tb_Precio.Text))
-                {
-                    MessageBox.Show("Por favor ingresá un precio.");
-                    return false;
-                }
-
-
-                //float precio;
-                //if (!float.TryParse(tb_Precio.Text, out precio))
-                //{
-                //    MessageBox.Show("El precio debe ser un número válido.");
-                //    //Se posiciona de nuevo en el text box 
-                //    tb_Precio.Focus();
-                //    return;
-                //}
-
-                //if (precio < 0)
-                //{
-                //    MessageBox.Show("El precio no puede ser negativo.");
-                //    tb_Precio.Focus();
-                //    return;
-                //}
-
-                if (float.Parse(tb_Precio.Text) < 0)
-                {
-                    MessageBox.Show("El precio no puede ser negativo.");
-                    return false;
-                }
-
-           
-            } else
+            if (tb_Descrip.Text.Length > 150)
             {
-                //Validación caracteres 
-                if (tb_Descrip.Text.Length > 150)
-                {
-                    MessageBox.Show("La descripción no puede tener más de 150 caracteres.");
+                MessageBox.Show("La descripción no puede tener más de 150 caracteres.");
                     return false;
-                }
-
-                //Validación de no ingresar un número negativo 
-                if (string.IsNullOrWhiteSpace(tb_Precio.Text))
-                {
-                    MessageBox.Show("Por favor ingresá un precio.");
-                    return false;
-                }
-
-
-                //float precio;
-                //if (!float.TryParse(tb_Precio.Text, out precio))
-                //{
-                //    MessageBox.Show("El precio debe ser un número válido.");
-                //    //Se posiciona de nuevo en el text box 
-                //    tb_Precio.Focus();
-                //    return;
-                //}
-
-                //if (precio < 0)
-                //{
-                //    MessageBox.Show("El precio no puede ser negativo.");
-                //    tb_Precio.Focus();
-                //    return;
-                //}
-
-                if (float.Parse(tb_Precio.Text) < 0)
-                {
-                    MessageBox.Show("El precio no puede ser negativo.");
-                    return false;
-                }
-
-                if (negocio.existeCodigo(nuevo.Codigo))
-                {
-                    MessageBox.Show("Ya existe un artículo con ese código. Ingresá uno diferente.");
-                    return false;
-                }
             }
 
-
+            //Validación de no ingresar un número negativo 
+            if (string.IsNullOrWhiteSpace(tb_codArt.Text) || (string.IsNullOrWhiteSpace(tb_nombreArt.Text) || string.IsNullOrWhiteSpace(tb_Precio.Text)))
+            {
+                MessageBox.Show("Por favor ingrese los campos obligatorios *","Campos obligatorios vacíos");
+                lbl_Obligatorio.Visible = true;
+                lbl_Obligatorio2.Visible = true;
+                lbl_Obligatorio3.Visible = true;
+                lbl_Obligatorio4.Visible = true;
+                lbl_Obligatorio5.Visible = true;
+                return false;
+            }
             return true;
         }
 
@@ -206,9 +136,10 @@ namespace TPWinForm_equipo_11A
                 }
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.ToString());
+                //MessageBox.Show(ex.ToString());
+                MessageBox.Show("Error desconocido, intente de nuevo más tarde");
             }
         }
 
